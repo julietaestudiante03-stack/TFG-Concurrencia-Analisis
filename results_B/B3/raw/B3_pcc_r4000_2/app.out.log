@@ -1,0 +1,3 @@
+2026-10-20T01:42:34.412-03:00  INFO 3076 --- [           main] com.tfg.concurrencia.TfgApplication      : Starting TfgApplication v1.0.0 using Java 27 with PID 3076 (C:\TFG-Concurrencia\app\target\concurrencia-1.0.0.jar started by julie in C:\TFG-Concurrencia)
+2026-10-20T01:42:34.424-03:00  INFO 3076 --- [           main] com.tfg.concurrencia.TfgApplication      : No active profile set, falling back to 1 default profile: "default"
+2026-10-20T01:42:35.663-03:00  INFO 3076 --- [           main] com.tfg.concurrencia.TfgApplication      : Started TfgApplication in 1.556 seconds (process running for 1.845)

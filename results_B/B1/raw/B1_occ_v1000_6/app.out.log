@@ -1,0 +1,3 @@
+2026-10-20T00:20:35.471-03:00  INFO 2620 --- [           main] com.tfg.concurrencia.TfgApplication      : Starting TfgApplication v1.0.0 using Java 27 with PID 2620 (C:\TFG-Concurrencia\app\target\concurrencia-1.0.0.jar started by julie in C:\TFG-Concurrencia)
+2026-10-20T00:20:35.486-03:00  INFO 2620 --- [           main] com.tfg.concurrencia.TfgApplication      : No active profile set, falling back to 1 default profile: "default"
+2026-10-20T00:20:36.673-03:00  INFO 2620 --- [           main] com.tfg.concurrencia.TfgApplication      : Started TfgApplication in 1.494 seconds (process running for 1.786)

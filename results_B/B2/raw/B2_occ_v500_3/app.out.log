@@ -1,0 +1,3 @@
+2026-10-19T19:44:16.856-03:00  INFO 23892 --- [           main] com.tfg.concurrencia.TfgApplication      : Starting TfgApplication v1.0.0 using Java 27 with PID 23892 (C:\TFG-Concurrencia\app\target\concurrencia-1.0.0.jar started by julie in C:\TFG-Concurrencia)
+2026-10-19T19:44:16.875-03:00  INFO 23892 --- [           main] com.tfg.concurrencia.TfgApplication      : No active profile set, falling back to 1 default profile: "default"
+2026-10-19T19:44:18.061-03:00  INFO 23892 --- [           main] com.tfg.concurrencia.TfgApplication      : Started TfgApplication in 1.493 seconds (process running for 1.785)

@@ -1,0 +1,14 @@
+﻿{
+    "success_total":  115020,
+    "conflicts_internal_attempts":  70700,
+    "retries":  61960,
+    "conflicts_returned":  8740,
+    "out_of_stock":  51185,
+    "errors":  0,
+    "errors_by_type":  {
+
+                       },
+    "first_errors":  [
+
+                     ]
+}

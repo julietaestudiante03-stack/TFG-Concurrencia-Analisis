@@ -1,0 +1,3 @@
+2026-10-19T19:46:12.838-03:00  INFO 16960 --- [           main] com.tfg.concurrencia.TfgApplication      : Starting TfgApplication v1.0.0 using Java 27 with PID 16960 (C:\TFG-Concurrencia\app\target\concurrencia-1.0.0.jar started by julie in C:\TFG-Concurrencia)
+2026-10-19T19:46:12.864-03:00  INFO 16960 --- [           main] com.tfg.concurrencia.TfgApplication      : No active profile set, falling back to 1 default profile: "default"
+2026-10-19T19:46:14.067-03:00  INFO 16960 --- [           main] com.tfg.concurrencia.TfgApplication      : Started TfgApplication in 1.52 seconds (process running for 1.827)

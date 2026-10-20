@@ -1,0 +1,3 @@
+2026-10-20T00:38:55.518-03:00  INFO 9708 --- [           main] com.tfg.concurrencia.TfgApplication      : Starting TfgApplication v1.0.0 using Java 27 with PID 9708 (C:\TFG-Concurrencia\app\target\concurrencia-1.0.0.jar started by julie in C:\TFG-Concurrencia)
+2026-10-20T00:38:55.544-03:00  INFO 9708 --- [           main] com.tfg.concurrencia.TfgApplication      : No active profile set, falling back to 1 default profile: "default"
+2026-10-20T00:38:56.755-03:00  INFO 9708 --- [           main] com.tfg.concurrencia.TfgApplication      : Started TfgApplication in 1.531 seconds (process running for 1.823)

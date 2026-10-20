@@ -1,0 +1,5 @@
+estrategia,corridas,corridas_consistentes,prop_consistente,ic95_lo,ic95_hi,unidades_perdidas_total,unidades_sobrevendidas_total,productos_stock_negativo,ventas_ok_media,oos_media,conflictos409_media,reintentos_media,errores500_total,deadlocks_total
+none,10,0,0.0,0.0,0.3084971078187608,834369,833518,0,219015.6,59412.8,0.0,0.0,180806,0
+occ,10,10,1.0,0.6915028921812392,1.0,0,0,0,130721.6,40633.8,82684.2,0.0,99751,0
+occretry,10,10,1.0,0.6915028921812392,1.0,0,0,0,114824.4,50671.4,8715.9,61308.8,122525,0
+pcc,10,10,1.0,0.6915028921812392,1.0,0,0,0,120305.6,81183.5,0.0,0.0,212531,0

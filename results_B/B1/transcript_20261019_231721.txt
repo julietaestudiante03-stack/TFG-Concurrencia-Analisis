@@ -1,0 +1,2728 @@
+﻿**********************
+Inicio de la transcripción de Windows PowerShell
+Hora de inicio: 20261019231721
+Nombre de usuario: ROLL-CANELA\julie
+Usuario RunAs: ROLL-CANELA\julie
+Nombre de la configuración: 
+Máquina: ROLL-CANELA (Microsoft Windows NT 10.0.26200.0)
+Aplicación host: C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -ExecutionPolicy Bypass -File .\run_campaign.ps1 -Campaign B1
+Id. de proceso: 21520
+PSVersion: 5.1.26100.8521
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.8521
+BuildVersion: 10.0.26100.8521
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+
+=== CAMPANIA B1 : 60 corridas (60 pendientes). Tiempo estimado: ~135 min ===
+No uses la PC mientras corre. Resultados en: C:\TFG-Concurrencia\results_B\B1
+
+==================================================
+[1/60] B1_pcc_v500_1   (estrategia=pcc, carga=v500, stock=1000, conjunto caliente=2000)
+==================================================
+-> Iniciando aplicacion (JVM nueva, -Xms1g -Xmx1g)...
+PS>ErrorTerminación(Invoke-WebRequest): "La operación sobrepasó el tiempo de espera."
+-> Calentamiento (no medido)...
+-> Restaurando BD (stock=1000, version=0), VACUUM y CHECKPOINT...
+-> Midiendo con k6...
+
+
+  Ôûê TOTAL RESULTS
+
+    checks_total.......: 415546  5540.56581/s
+    checks_succeeded...: 100.00% 415546 out of 415546
+    checks_failed......: 0.00%   0 out of 415546
+
+    Ô£ô respuesta esperada (200/400/409)
+
+    CUSTOM
+    app_conflict...................: 0      0/s
+    app_error......................: 0      0/s
+    app_out_of_stock...............: 0      0/s
+    app_success....................: 415546 5540.56581/s
+
+    HTTP
+    http_req_duration..............: avg=81.03ms min=3.05ms med=83.52ms max=392.75ms p(90)=103.71ms p(95)=110.46ms
+      { expected_response:true }...: avg=81.03ms min=3.05ms med=83.52ms max=392.75ms p(90)=103.71ms p(95)=110.46ms
+    http_req_failed................: 0.00%  0 out of 415546
+    http_reqs......................: 415546 5540.56581/s
+
+    EXECUTION
+    iteration_duration.............: avg=81.22ms min=3.05ms med=83.7ms  max=392.75ms p(90)=103.89ms p(95)=110.65ms
+    iterations.....................: 415546 5540.56581/s
+    vus............................: 5      min=5           max=500
+    vus_max........................: 500    min=500         max=500
+
+    NETWORK
+    data_received..................: 67 MB  888 kB/s
+    data_sent......................: 73 MB  973 kB/s
+
+
+
+-> Auditando estado final del inventario...
+OK  req=415546  thr=5540.6 req/s  lat_media=81.04 ms  409=0  400=0  errores=0  auditoria_consistente=True
+
+==================================================
+[2/60] B1_occ_v100_1   (estrategia=occ, carga=v100, stock=1000, conjunto caliente=2000)
+==================================================
+-> Iniciando aplicacion (JVM nueva, -Xms1g -Xmx1g)...
+PS>ErrorTerminación(Invoke-WebRequest): "La operación sobrepasó el tiempo de espera."
+-> Calentamiento (no medido)...
+-> Restaurando BD (stock=1000, version=0), VACUUM y CHECKPOINT...
+-> Midiendo con k6...
+
+
+  Ôûê TOTAL RESULTS
+
+    checks_total.......: 366673  4888.847996/s
+    checks_succeeded...: 100.00% 366673 out of 366673
+    checks_failed......: 0.00%   0 out of 366673
+
+    Ô£ô respuesta esperada (200/400/409)
+
+    CUSTOM
+    app_conflict...................: 7203   96.037538/s
+    app_error......................: 0      0/s
+    app_out_of_stock...............: 0      0/s
+    app_success....................: 359470 4792.810458/s
+
+    HTTP
+    http_req_duration..............: avg=18.19ms min=2.37ms med=18.13ms max=70.96ms p(90)=24.27ms p(95)=26.4ms
+      { expected_response:true }...: avg=18.19ms min=2.37ms med=18.13ms max=70.96ms p(90)=24.27ms p(95)=26.4ms
+    http_req_failed................: 0.00%  0 out of 366673
+    http_reqs......................: 366673 4888.847996/s
+
+    EXECUTION
+    iteration_duration.............: avg=18.38ms min=2.37ms med=18.31ms max=71.49ms p(90)=24.49ms p(95)=26.63ms
+    iterations.....................: 366673 4888.847996/s
+    vus............................: 1      min=1           max=100
+    vus_max........................: 100    min=100         max=100
+
+    NETWORK
+    data_received..................: 59 MB  783 kB/s
+    data_sent......................: 64 MB  858 kB/s
+
+
+
+-> Auditando estado final del inventario...
+OK  req=366673  thr=4888.8 req/s  lat_media=18.19 ms  409=7203  400=0  errores=0  auditoria_consistente=True
+
+==================================================
+[3/60] B1_pcc_v100_1   (estrategia=pcc, carga=v100, stock=1000, conjunto caliente=2000)
+==================================================
+-> Iniciando aplicacion (JVM nueva, -Xms1g -Xmx1g)...
+PS>ErrorTerminación(Invoke-WebRequest): "La operación sobrepasó el tiempo de espera."
+-> Calentamiento (no medido)...
+-> Restaurando BD (stock=1000, version=0), VACUUM y CHECKPOINT...
+-> Midiendo con k6...
+
+
+  Ôûê TOTAL RESULTS
+
+    checks_total.......: 361021  4813.521633/s
+    checks_succeeded...: 100.00% 361021 out of 361021
+    checks_failed......: 0.00%   0 out of 361021
+
+    Ô£ô respuesta esperada (200/400/409)
+
+    CUSTOM
+    app_conflict...................: 0      0/s
+    app_error......................: 0      0/s
+    app_out_of_stock...............: 0      0/s
+    app_success....................: 361021 4813.521633/s
+
+    HTTP
+    http_req_duration..............: avg=18.48ms min=2.57ms med=18.29ms max=70.79ms p(90)=24.83ms p(95)=27.26ms
+      { expected_response:true }...: avg=18.48ms min=2.57ms med=18.29ms max=70.79ms p(90)=24.83ms p(95)=27.26ms
+    http_req_failed................: 0.00%  0 out of 361021
+    http_reqs......................: 361021 4813.521633/s
+
+    EXECUTION
+    iteration_duration.............: avg=18.67ms min=3.08ms med=18.48ms max=71.62ms p(90)=25.03ms p(95)=27.46ms
+    iterations.....................: 361021 4813.521633/s
+    vus............................: 1      min=1           max=100
+    vus_max........................: 100    min=100         max=100
+
+    NETWORK
+    data_received..................: 58 MB  771 kB/s
+    data_sent......................: 63 MB  845 kB/s
+
+
+
+-> Auditando estado final del inventario...
+OK  req=361021  thr=4813.5 req/s  lat_media=18.49 ms  409=0  400=0  errores=0  auditoria_consistente=True
+
+==================================================
+[4/60] B1_occ_v500_1   (estrategia=occ, carga=v500, stock=1000, conjunto caliente=2000)
+==================================================
+-> Iniciando aplicacion (JVM nueva, -Xms1g -Xmx1g)...
+PS>ErrorTerminación(Invoke-WebRequest): "La operación sobrepasó el tiempo de espera."
+-> Calentamiento (no medido)...
+-> Restaurando BD (stock=1000, version=0), VACUUM y CHECKPOINT...
+-> Midiendo con k6...
+
+
+  Ôûê TOTAL RESULTS
+
+    checks_total.......: 416638  5554.990263/s
+    checks_succeeded...: 100.00% 416638 out of 416638
+    checks_failed......: 0.00%   0 out of 416638
+
+    Ô£ô respuesta esperada (200/400/409)
+
+    CUSTOM
+    app_conflict...................: 17527  233.685632/s
+    app_error......................: 0      0/s
+    app_out_of_stock...............: 0      0/s
+    app_success....................: 399111 5321.304631/s
+
+    HTTP
+    http_req_duration..............: avg=80.83ms min=2.84ms med=83.75ms max=195.79ms p(90)=104.13ms p(95)=110.67ms
+      { expected_response:true }...: avg=80.83ms min=2.84ms med=83.75ms max=195.79ms p(90)=104.13ms p(95)=110.67ms
+    http_req_failed................: 0.00%  0 out of 416638
+    http_reqs......................: 416638 5554.990263/s
+
+    EXECUTION
+    iteration_duration.............: avg=81.01ms min=2.84ms med=83.92ms max=195.79ms p(90)=104.32ms p(95)=110.86ms
+    iterations.....................: 416638 5554.990263/s
+    vus............................: 5      min=5           max=500
+    vus_max........................: 500    min=500         max=500
+
+    NETWORK
+    data_received..................: 67 MB  890 kB/s
+    data_sent......................: 73 MB  975 kB/s
+
+
+
+-> Auditando estado final del inventario...
+OK  req=416638  thr=5555 req/s  lat_media=80.83 ms  409=17527  400=0  errores=0  auditoria_consistente=True
+
+==================================================
+[5/60] B1_occ_v1000_1   (estrategia=occ, carga=v1000, stock=1000, conjunto caliente=2000)
+==================================================
+-> Iniciando aplicacion (JVM nueva, -Xms1g -Xmx1g)...
+PS>ErrorTerminación(Invoke-WebRequest): "La operación sobrepasó el tiempo de espera."
+-> Calentamiento (no medido)...
+-> Restaurando BD (stock=1000, version=0), VACUUM y CHECKPOINT...
+-> Midiendo con k6...
+
+
+  Ôûê TOTAL RESULTS
+
+    checks_total.......: 406597  5421.128473/s
+    checks_succeeded...: 100.00% 406597 out of 406597
+    checks_failed......: 0.00%   0 out of 406597
+
+    Ô£ô respuesta esperada (200/400/409)
+
+    CUSTOM
+    app_conflict...................: 17485  233.126244/s
+    app_error......................: 0      0/s
+    app_out_of_stock...............: 0      0/s
+    app_success....................: 389112 5188.002229/s
+
+    HTTP
+    http_req_duration..............: avg=165.91ms min=3.17ms med=175.75ms max=297.94ms p(90)=201.14ms p(95)=209.04ms
+      { expected_response:true }...: avg=165.91ms min=3.17ms med=175.75ms max=297.94ms p(90)=201.14ms p(95)=209.04ms
+    http_req_failed................: 0.00%  0 out of 406597
+    http_reqs......................: 406597 5421.128473/s
+
+    EXECUTION
+    iteration_duration.............: avg=166.1ms  min=3.17ms med=175.92ms max=297.94ms p(90)=201.35ms p(95)=209.24ms
+    iterations.....................: 406597 5421.128473/s
+    vus............................: 18     min=18          max=1000
+    vus_max........................: 1000   min=1000        max=1000
+
+    NETWORK
+    data_received..................: 65 MB  869 kB/s
+    data_sent......................: 71 MB  952 kB/s
+
+
+
+-> Auditando estado final del inventario...
+OK  req=406597  thr=5421.1 req/s  lat_media=165.92 ms  409=17485  400=0  errores=0  auditoria_consistente=True
+
+==================================================
+[6/60] B1_pcc_v1000_1   (estrategia=pcc, carga=v1000, stock=1000, conjunto caliente=2000)
+==================================================
+-> Iniciando aplicacion (JVM nueva, -Xms1g -Xmx1g)...
+PS>ErrorTerminación(Invoke-WebRequest): "La operación sobrepasó el tiempo de espera."
+-> Calentamiento (no medido)...
+-> Restaurando BD (stock=1000, version=0), VACUUM y CHECKPOINT...
+-> Midiendo con k6...
+
+
+  Ôûê TOTAL RESULTS
+
+    checks_total.......: 414370  5524.586323/s
+    checks_succeeded...: 100.00% 414370 out of 414370
+    checks_failed......: 0.00%   0 out of 414370
+
+    Ô£ô respuesta esperada (200/400/409)
+
+    CUSTOM
+    app_conflict...................: 0      0/s
+    app_error......................: 0      0/s
+    app_out_of_stock...............: 0      0/s
+    app_success....................: 414370 5524.586323/s
+
+    HTTP
+    http_req_duration..............: avg=162.79ms min=3.57ms med=171.96ms max=304.21ms p(90)=198.6ms  p(95)=207.62ms
+      { expected_response:true }...: avg=162.79ms min=3.57ms med=171.96ms max=304.21ms p(90)=198.6ms  p(95)=207.62ms
+    http_req_failed................: 0.00%  0 out of 414370
+    http_reqs......................: 414370 5524.586323/s
+
+    EXECUTION
+    iteration_duration.............: avg=162.98ms min=3.57ms med=172.15ms max=309.3ms  p(90)=198.79ms p(95)=207.84ms
+    iterations.....................: 414370 5524.586323/s
+    vus............................: 17     min=17          max=1000
+    vus_max........................: 1000   min=1000        max=1000
+
+    NETWORK
+    data_received..................: 66 MB  885 kB/s
+    data_sent......................: 73 MB  970 kB/s
+
+
+
+-> Auditando estado final del inventario...
+OK  req=414370  thr=5524.6 req/s  lat_media=162.8 ms  409=0  400=0  errores=0  auditoria_consistente=True
+
+==================================================
+[7/60] B1_pcc_v500_2   (estrategia=pcc, carga=v500, stock=1000, conjunto caliente=2000)
+==================================================
+-> Iniciando aplicacion (JVM nueva, -Xms1g -Xmx1g)...
+PS>ErrorTerminación(Invoke-WebRequest): "La operación sobrepasó el tiempo de espera."
+-> Calentamiento (no medido)...
+-> Restaurando BD (stock=1000, version=0), VACUUM y CHECKPOINT...
+-> Midiendo con k6...
+
+
+  Ôûê TOTAL RESULTS
+
+    checks_total.......: 405425  5405.425823/s
+    checks_succeeded...: 100.00% 405425 out of 405425
+    checks_failed......: 0.00%   0 out of 405425
+
+    Ô£ô respuesta esperada (200/400/409)
+
+    CUSTOM
+    app_conflict...................: 0      0/s
+    app_error......................: 0      0/s
+    app_out_of_stock...............: 0      0/s
+    app_success....................: 405425 5405.425823/s
+
+    HTTP
+    http_req_duration..............: avg=83.06ms min=2.51ms med=85.23ms max=366.81ms p(90)=107.48ms p(95)=114.91ms
+      { expected_response:true }...: avg=83.06ms min=2.51ms med=85.23ms max=366.81ms p(90)=107.48ms p(95)=114.91ms
+    http_req_failed................: 0.00%  0 out of 405425
+    http_reqs......................: 405425 5405.425823/s
+
+    EXECUTION
+    iteration_duration.............: avg=83.25ms min=2.51ms med=85.41ms max=366.81ms p(90)=107.67ms p(95)=115.12ms
+    iterations.....................: 405425 5405.425823/s
+    vus............................: 5      min=5           max=500
+    vus_max........................: 500    min=500         max=500
+
+    NETWORK
+    data_received..................: 65 MB  866 kB/s
+    data_sent......................: 71 MB  949 kB/s
+
+
+
+-> Auditando estado final del inventario...
+OK  req=405425  thr=5405.4 req/s  lat_media=83.06 ms  409=0  400=0  errores=0  auditoria_consistente=True
+
+==================================================
+[8/60] B1_pcc_v1000_2   (estrategia=pcc, carga=v1000, stock=1000, conjunto caliente=2000)
+==================================================
+-> Iniciando aplicacion (JVM nueva, -Xms1g -Xmx1g)...
+PS>ErrorTerminación(Invoke-WebRequest): "La operación sobrepasó el tiempo de espera."
+-> Calentamiento (no medido)...
+-> Restaurando BD (stock=1000, version=0), VACUUM y CHECKPOINT...
+-> Midiendo con k6...
+
+
+  Ôûê TOTAL RESULTS
+
+    checks_total.......: 411677  5488.704187/s
+    checks_succeeded...: 100.00% 411677 out of 411677
+    checks_failed......: 0.00%   0 out of 411677
+
+    Ô£ô respuesta esperada (200/400/409)
+
+    CUSTOM
+    app_conflict...................: 0      0/s
+    app_error......................: 0      0/s
+    app_out_of_stock...............: 0      0/s
+    app_success....................: 411677 5488.704187/s
+
+    HTTP
+    http_req_duration..............: avg=163.85ms min=3.17ms med=172.42ms max=317.46ms p(90)=199.49ms p(95)=208.33ms
+      { expected_response:true }...: avg=163.85ms min=3.17ms med=172.42ms max=317.46ms p(90)=199.49ms p(95)=208.33ms
+    http_req_failed................: 0.00%  0 out of 411677
+    http_reqs......................: 411677 5488.704187/s
+
+    EXECUTION
+    iteration_duration.............: avg=164.05ms min=3.69ms med=172.61ms max=317.46ms p(90)=199.72ms p(95)=208.58ms
+    iterations.....................: 411677 5488.704187/s
+    vus............................: 18     min=18          max=1000
+    vus_max........................: 1000   min=1000        max=1000
+
+    NETWORK
+    data_received..................: 66 MB  879 kB/s
+    data_sent......................: 72 MB  964 kB/s
+
+
+
+-> Auditando estado final del inventario...
+OK  req=411677  thr=5488.7 req/s  lat_media=163.86 ms  409=0  400=0  errores=0  auditoria_consistente=True
+
+==================================================
+[9/60] B1_occ_v500_2   (estrategia=occ, carga=v500, stock=1000, conjunto caliente=2000)
+==================================================
+-> Iniciando aplicacion (JVM nueva, -Xms1g -Xmx1g)...
+PS>ErrorTerminación(Invoke-WebRequest): "La operación sobrepasó el tiempo de espera."
+-> Calentamiento (no medido)...
+-> Restaurando BD (stock=1000, version=0), VACUUM y CHECKPOINT...
+-> Midiendo con k6...
+
+
+  Ôûê TOTAL RESULTS
+
+    checks_total.......: 415117  5534.646466/s
+    checks_succeeded...: 100.00% 415117 out of 415117
+    checks_failed......: 0.00%   0 out of 415117
+
+    Ô£ô respuesta esperada (200/400/409)
+
+    CUSTOM
+    app_conflict...................: 17521  233.602914/s
+    app_error......................: 0      0/s
+    app_out_of_stock...............: 0      0/s
+    app_success....................: 397596 5301.043552/s
+
+    HTTP
+    http_req_duration..............: avg=81.12ms min=3.15ms med=84.15ms max=194.19ms p(90)=103.92ms p(95)=110.23ms
+      { expected_response:true }...: avg=81.12ms min=3.15ms med=84.15ms max=194.19ms p(90)=103.92ms p(95)=110.23ms
+    http_req_failed................: 0.00%  0 out of 415117
+    http_reqs......................: 415117 5534.646466/s
+
+    EXECUTION
+    iteration_duration.............: avg=81.3ms  min=3.15ms med=84.32ms max=194.19ms p(90)=104.14ms p(95)=110.42ms
+    iterations.....................: 415117 5534.646466/s
+    vus............................: 5      min=5           max=500
+    vus_max........................: 500    min=500         max=500
+
+    NETWORK
+    data_received..................: 67 MB  887 kB/s
+    data_sent......................: 73 MB  972 kB/s
+
+
+
+-> Auditando estado final del inventario...
+OK  req=415117  thr=5534.6 req/s  lat_media=81.12 ms  409=17521  400=0  errores=0  auditoria_consistente=True
+
+==================================================
+[10/60] B1_occ_v100_2   (estrategia=occ, carga=v100, stock=1000, conjunto caliente=2000)
+==================================================
+-> Iniciando aplicacion (JVM nueva, -Xms1g -Xmx1g)...
+PS>ErrorTerminación(Invoke-WebRequest): "La operación sobrepasó el tiempo de espera."
+-> Calentamiento (no medido)...
+-> Restaurando BD (stock=1000, version=0), VACUUM y CHECKPOINT...
+-> Midiendo con k6...
+
+
+  Ôûê TOTAL RESULTS
+
+    checks_total.......: 339134  4521.76867/s
+    checks_succeeded...: 100.00% 339134 out of 339134
+    checks_failed......: 0.00%   0 out of 339134
+
+    Ô£ô respuesta esperada (200/400/409)
+
+    CUSTOM
+    app_conflict...................: 6754   90.052975/s
+    app_error......................: 0      0/s
+    app_out_of_stock...............: 0      0/s
+    app_success....................: 332380 4431.715695/s
+
+    HTTP
+    http_req_duration..............: avg=19.68ms min=2.66ms med=19.41ms max=325.22ms p(90)=25.54ms p(95)=27.77ms
+      { expected_response:true }...: avg=19.68ms min=2.66ms med=19.41ms max=325.22ms p(90)=25.54ms p(95)=27.77ms
+    http_req_failed................: 0.00%  0 out of 339134
+    http_reqs......................: 339134 4521.76867/s
+
+    EXECUTION
+    iteration_duration.............: avg=19.87ms min=2.66ms med=19.59ms max=325.22ms p(90)=25.76ms p(95)=28.01ms
+    iterations.....................: 339134 4521.76867/s
+    vus............................: 1      min=1           max=100
+    vus_max........................: 100    min=100         max=100
+
+    NETWORK
+    data_received..................: 54 MB  725 kB/s
+    data_sent......................: 60 MB  794 kB/s
+
+
+
+-> Auditando estado final del inventario...
+OK  req=339134  thr=4521.8 req/s  lat_media=19.68 ms  409=6754  400=0  errores=0  auditoria_consistente=True
+
+==================================================
+[11/60] B1_pcc_v100_2   (estrategia=pcc, carga=v100, stock=1000, conjunto caliente=2000)
+==================================================
+-> Iniciando aplicacion (JVM nueva, -Xms1g -Xmx1g)...
+PS>ErrorTerminación(Invoke-WebRequest): "La operación sobrepasó el tiempo de espera."
+-> Calentamiento (no medido)...
+-> Restaurando BD (stock=1000, version=0), VACUUM y CHECKPOINT...
+-> Midiendo con k6...
+
+
+  Ôûê TOTAL RESULTS
+
+    checks_total.......: 350127  4668.294974/s
+    checks_succeeded...: 100.00% 350127 out of 350127
+    checks_failed......: 0.00%   0 out of 350127
+
+    Ô£ô respuesta esperada (200/400/409)
+
+    CUSTOM
+    app_conflict...................: 0      0/s
+    app_error......................: 0      0/s
+    app_out_of_stock...............: 0      0/s
+    app_success....................: 350127 4668.294974/s
+
+    HTTP
+    http_req_duration..............: avg=19.06ms min=2.93ms med=18.52ms max=303.42ms p(90)=25.18ms p(95)=27.7ms
+      { expected_response:true }...: avg=19.06ms min=2.93ms med=18.52ms max=303.42ms p(90)=25.18ms p(95)=27.7ms
+    http_req_failed................: 0.00%  0 out of 350127
+    http_reqs......................: 350127 4668.294974/s
+
+    EXECUTION
+    iteration_duration.............: avg=19.25ms min=2.93ms med=18.71ms max=303.93ms p(90)=25.38ms p(95)=27.93ms
+    iterations.....................: 350127 4668.294974/s
+    vus............................: 1      min=1           max=100
+    vus_max........................: 100    min=100         max=100
+
+    NETWORK
+    data_received..................: 56 MB  748 kB/s
+    data_sent......................: 62 MB  820 kB/s
+
+
+
+-> Auditando estado final del inventario...
+OK  req=350127  thr=4668.3 req/s  lat_media=19.07 ms  409=0  400=0  errores=0  auditoria_consistente=True
+
+==================================================
+[12/60] B1_occ_v1000_2   (estrategia=occ, carga=v1000, stock=1000, conjunto caliente=2000)
+==================================================
+-> Iniciando aplicacion (JVM nueva, -Xms1g -Xmx1g)...
+PS>ErrorTerminación(Invoke-WebRequest): "La operación sobrepasó el tiempo de espera."
+-> Calentamiento (no medido)...
+-> Restaurando BD (stock=1000, version=0), VACUUM y CHECKPOINT...
+-> Midiendo con k6...
+
+
+  Ôûê TOTAL RESULTS
+
+    checks_total.......: 407093  5427.738233/s
+    checks_succeeded...: 100.00% 407093 out of 407093
+    checks_failed......: 0.00%   0 out of 407093
+
+    Ô£ô respuesta esperada (200/400/409)
+
+    CUSTOM
+    app_conflict...................: 17641  235.206034/s
+    app_error......................: 0      0/s
+    app_out_of_stock...............: 0      0/s
+    app_success....................: 389452 5192.532199/s
+
+    HTTP
+    http_req_duration..............: avg=165.7ms  min=3.3ms med=173.03ms max=589.2ms p(90)=200.74ms p(95)=210.1ms
+      { expected_response:true }...: avg=165.7ms  min=3.3ms med=173.03ms max=589.2ms p(90)=200.74ms p(95)=210.1ms
+    http_req_failed................: 0.00%  0 out of 407093
+    http_reqs......................: 407093 5427.738233/s
+
+    EXECUTION
+    iteration_duration.............: avg=165.89ms min=3.3ms med=173.22ms max=589.2ms p(90)=200.96ms p(95)=210.32ms
+    iterations.....................: 407093 5427.738233/s
+    vus............................: 18     min=18          max=1000
+    vus_max........................: 1000   min=1000        max=1000
+
+    NETWORK
+    data_received..................: 65 MB  870 kB/s
+    data_sent......................: 72 MB  953 kB/s
+
+
+
+-> Auditando estado final del inventario...
+OK  req=407093  thr=5427.7 req/s  lat_media=165.71 ms  409=17641  400=0  errores=0  auditoria_consistente=True
+
+==================================================
+[13/60] B1_occ_v500_3   (estrategia=occ, carga=v500, stock=1000, conjunto caliente=2000)
+==================================================
+-> Iniciando aplicacion (JVM nueva, -Xms1g -Xmx1g)...
+PS>ErrorTerminación(Invoke-WebRequest): "La operación sobrepasó el tiempo de espera."
+-> Calentamiento (no medido)...
+-> Restaurando BD (stock=1000, version=0), VACUUM y CHECKPOINT...
+-> Midiendo con k6...
+
+
+  Ôûê TOTAL RESULTS
+
+    checks_total.......: 412870  5504.770957/s
+    checks_succeeded...: 100.00% 412870 out of 412870
+    checks_failed......: 0.00%   0 out of 412870
+
+    Ô£ô respuesta esperada (200/400/409)
+
+    CUSTOM
+    app_conflict...................: 17580  234.393086/s
+    app_error......................: 0      0/s
+    app_out_of_stock...............: 0      0/s
+    app_success....................: 395290 5270.377871/s
+
+    HTTP
+    http_req_duration..............: avg=81.55ms min=3.18ms med=84.1ms  max=210.98ms p(90)=105.29ms p(95)=112.11ms
+      { expected_response:true }...: avg=81.55ms min=3.18ms med=84.1ms  max=210.98ms p(90)=105.29ms p(95)=112.11ms
+    http_req_failed................: 0.00%  0 out of 412870
+    http_reqs......................: 412870 5504.770957/s
+
+    EXECUTION
+    iteration_duration.............: avg=81.74ms min=3.19ms med=84.28ms max=210.98ms p(90)=105.5ms  p(95)=112.32ms
+    iterations.....................: 412870 5504.770957/s
+    vus............................: 5      min=5           max=500
+    vus_max........................: 500    min=500         max=500
+
+    NETWORK
+    data_received..................: 66 MB  882 kB/s
+    data_sent......................: 73 MB  966 kB/s
+
+
+
+-> Auditando estado final del inventario...
+OK  req=412870  thr=5504.8 req/s  lat_media=81.56 ms  409=17580  400=0  errores=0  auditoria_consistente=True
+
+==================================================
+[14/60] B1_pcc_v500_3   (estrategia=pcc, carga=v500, stock=1000, conjunto caliente=2000)
+==================================================
+-> Iniciando aplicacion (JVM nueva, -Xms1g -Xmx1g)...
+PS>ErrorTerminación(Invoke-WebRequest): "La operación sobrepasó el tiempo de espera."
+-> Calentamiento (no medido)...
+-> Restaurando BD (stock=1000, version=0), VACUUM y CHECKPOINT...
+-> Midiendo con k6...
+
+
+  Ôûê TOTAL RESULTS
+
+    checks_total.......: 410561  5473.904771/s
+    checks_succeeded...: 100.00% 410561 out of 410561
+    checks_failed......: 0.00%   0 out of 410561
+
+    Ô£ô respuesta esperada (200/400/409)
+
+    CUSTOM
+    app_conflict...................: 0      0/s
+    app_error......................: 0      0/s
+    app_out_of_stock...............: 0      0/s
+    app_success....................: 410561 5473.904771/s
+
+    HTTP
+    http_req_duration..............: avg=82.02ms min=2.64ms med=84.66ms max=212.7ms  p(90)=106.16ms p(95)=113.54ms
+      { expected_response:true }...: avg=82.02ms min=2.64ms med=84.66ms max=212.7ms  p(90)=106.16ms p(95)=113.54ms
+    http_req_failed................: 0.00%  0 out of 410561
+    http_reqs......................: 410561 5473.904771/s
+
+    EXECUTION
+    iteration_duration.............: avg=82.2ms  min=3.16ms med=84.83ms max=212.85ms p(90)=106.36ms p(95)=113.75ms
+    iterations.....................: 410561 5473.904771/s
+    vus............................: 5      min=5           max=500
+    vus_max........................: 500    min=500         max=500
+
+    NETWORK
+    data_received..................: 66 MB  877 kB/s
+    data_sent......................: 72 MB  961 kB/s
+
+
+
+-> Auditando estado final del inventario...
+OK  req=410561  thr=5473.9 req/s  lat_media=82.03 ms  409=0  400=0  errores=0  auditoria_consistente=True
+
+==================================================
+[15/60] B1_pcc_v100_3   (estrategia=pcc, carga=v100, stock=1000, conjunto caliente=2000)
+==================================================
+-> Iniciando aplicacion (JVM nueva, -Xms1g -Xmx1g)...
+PS>ErrorTerminación(Invoke-WebRequest): "La operación sobrepasó el tiempo de espera."
+-> Calentamiento (no medido)...
+-> Restaurando BD (stock=1000, version=0), VACUUM y CHECKPOINT...
+-> Midiendo con k6...
+
+
+  Ôûê TOTAL RESULTS
+
+    checks_total.......: 348620  4648.14227/s
+    checks_succeeded...: 100.00% 348620 out of 348620
+    checks_failed......: 0.00%   0 out of 348620
+
+    Ô£ô respuesta esperada (200/400/409)
+
+    CUSTOM
+    app_conflict...................: 0      0/s
+    app_error......................: 0      0/s
+    app_out_of_stock...............: 0      0/s
+    app_success....................: 348620 4648.14227/s
+
+    HTTP
+    http_req_duration..............: avg=19.14ms min=3.02ms med=18.64ms max=244.57ms p(90)=25.26ms p(95)=27.73ms
+      { expected_response:true }...: avg=19.14ms min=3.02ms med=18.64ms max=244.57ms p(90)=25.26ms p(95)=27.73ms
+    http_req_failed................: 0.00%  0 out of 348620
+    http_reqs......................: 348620 4648.14227/s
+
+    EXECUTION
+    iteration_duration.............: avg=19.33ms min=3.02ms med=18.84ms max=248.08ms p(90)=25.46ms p(95)=27.97ms
+    iterations.....................: 348620 4648.14227/s
+    vus............................: 1      min=1           max=100
+    vus_max........................: 100    min=100         max=100
+
+    NETWORK
+    data_received..................: 56 MB  745 kB/s
+    data_sent......................: 61 MB  816 kB/s
+
+
+
+-> Auditando estado final del inventario...
+OK  req=348620  thr=4648.1 req/s  lat_media=19.14 ms  409=0  400=0  errores=0  auditoria_consistente=True
+
+==================================================
+[16/60] B1_occ_v1000_3   (estrategia=occ, carga=v1000, stock=1000, conjunto caliente=2000)
+==================================================
+-> Iniciando aplicacion (JVM nueva, -Xms1g -Xmx1g)...
+PS>ErrorTerminación(Invoke-WebRequest): "La operación sobrepasó el tiempo de espera."
+-> Calentamiento (no medido)...
+-> Restaurando BD (stock=1000, version=0), VACUUM y CHECKPOINT...
+-> Midiendo con k6...
+
+
+  Ôûê TOTAL RESULTS
+
+    checks_total.......: 411059  5480.723982/s
+    checks_succeeded...: 100.00% 411059 out of 411059
+    checks_failed......: 0.00%   0 out of 411059
+
+    Ô£ô respuesta esperada (200/400/409)
+
+    CUSTOM
+    app_conflict...................: 17687  235.823969/s
+    app_error......................: 0      0/s
+    app_out_of_stock...............: 0      0/s
+    app_success....................: 393372 5244.900012/s
+
+    HTTP
+    http_req_duration..............: avg=164.1ms  min=3.15ms med=172.81ms max=399.83ms p(90)=199.49ms p(95)=208.81ms
+      { expected_response:true }...: avg=164.1ms  min=3.15ms med=172.81ms max=399.83ms p(90)=199.49ms p(95)=208.81ms
+    http_req_failed................: 0.00%  0 out of 411059
+    http_reqs......................: 411059 5480.723982/s
+
+    EXECUTION
+    iteration_duration.............: avg=164.29ms min=3.16ms med=172.99ms max=400.19ms p(90)=199.71ms p(95)=209.03ms
+    iterations.....................: 411059 5480.723982/s
+    vus............................: 18     min=18          max=1000
+    vus_max........................: 1000   min=1000        max=1000
+
+    NETWORK
+    data_received..................: 66 MB  878 kB/s
+    data_sent......................: 72 MB  962 kB/s
+
+
+
+-> Auditando estado final del inventario...
+OK  req=411059  thr=5480.7 req/s  lat_media=164.1 ms  409=17687  400=0  errores=0  auditoria_consistente=True
+
+==================================================
+[17/60] B1_occ_v100_3   (estrategia=occ, carga=v100, stock=1000, conjunto caliente=2000)
+==================================================
+-> Iniciando aplicacion (JVM nueva, -Xms1g -Xmx1g)...
+PS>ErrorTerminación(Invoke-WebRequest): "La operación sobrepasó el tiempo de espera."
+-> Calentamiento (no medido)...
+-> Restaurando BD (stock=1000, version=0), VACUUM y CHECKPOINT...
+-> Midiendo con k6...
+
+
+  Ôûê TOTAL RESULTS
+
+    checks_total.......: 348438  4645.629305/s
+    checks_succeeded...: 100.00% 348438 out of 348438
+    checks_failed......: 0.00%   0 out of 348438
+
+    Ô£ô respuesta esperada (200/400/409)
+
+    CUSTOM
+    app_conflict...................: 6998   93.302435/s
+    app_error......................: 0      0/s
+    app_out_of_stock...............: 0      0/s
+    app_success....................: 341440 4552.32687/s
+
+    HTTP
+    http_req_duration..............: avg=19.15ms min=2.54ms med=18.69ms max=317.77ms p(90)=25.22ms p(95)=27.63ms
+      { expected_response:true }...: avg=19.15ms min=2.54ms med=18.69ms max=317.77ms p(90)=25.22ms p(95)=27.63ms
+    http_req_failed................: 0.00%  0 out of 348438
+    http_reqs......................: 348438 4645.629305/s
+
+    EXECUTION
+    iteration_duration.............: avg=19.34ms min=2.54ms med=18.88ms max=317.77ms p(90)=25.42ms p(95)=27.83ms
+    iterations.....................: 348438 4645.629305/s
+    vus............................: 1      min=1           max=100
+    vus_max........................: 100    min=100         max=100
+
+    NETWORK
+    data_received..................: 56 MB  744 kB/s
+    data_sent......................: 61 MB  816 kB/s
+
+
+
+-> Auditando estado final del inventario...
+OK  req=348438  thr=4645.6 req/s  lat_media=19.16 ms  409=6998  400=0  errores=0  auditoria_consistente=True
+
+==================================================
+[18/60] B1_pcc_v1000_3   (estrategia=pcc, carga=v1000, stock=1000, conjunto caliente=2000)
+==================================================
+-> Iniciando aplicacion (JVM nueva, -Xms1g -Xmx1g)...
+PS>ErrorTerminación(Invoke-WebRequest): "La operación sobrepasó el tiempo de espera."
+-> Calentamiento (no medido)...
+-> Restaurando BD (stock=1000, version=0), VACUUM y CHECKPOINT...
+-> Midiendo con k6...
+
+
+  Ôûê TOTAL RESULTS
+
+    checks_total.......: 404630  5394.630752/s
+    checks_succeeded...: 100.00% 404630 out of 404630
+    checks_failed......: 0.00%   0 out of 404630
+
+    Ô£ô respuesta esperada (200/400/409)
+
+    CUSTOM
+    app_conflict...................: 0      0/s
+    app_error......................: 0      0/s
+    app_out_of_stock...............: 0      0/s
+    app_success....................: 404630 5394.630752/s
+
+    HTTP
+    http_req_duration..............: avg=166.72ms min=3.71ms med=174.15ms max=705.87ms p(90)=201.87ms p(95)=212.16ms
+      { expected_response:true }...: avg=166.72ms min=3.71ms med=174.15ms max=705.87ms p(90)=201.87ms p(95)=212.16ms
+    http_req_failed................: 0.00%  0 out of 404630
+    http_reqs......................: 404630 5394.630752/s
+
+    EXECUTION
+    iteration_duration.............: avg=166.9ms  min=3.74ms med=174.31ms max=706.37ms p(90)=202.07ms p(95)=212.36ms
+    iterations.....................: 404630 5394.630752/s
+    vus............................: 17     min=17          max=1000
+    vus_max........................: 1000   min=1000        max=1000
+
+    NETWORK
+    data_received..................: 65 MB  864 kB/s
+    data_sent......................: 71 MB  947 kB/s
+
+
+
+-> Auditando estado final del inventario...
+OK  req=404630  thr=5394.6 req/s  lat_media=166.72 ms  409=0  400=0  errores=0  auditoria_consistente=True
+
+==================================================
+[19/60] B1_pcc_v1000_4   (estrategia=pcc, carga=v1000, stock=1000, conjunto caliente=2000)
+==================================================
+-> Iniciando aplicacion (JVM nueva, -Xms1g -Xmx1g)...
+PS>ErrorTerminación(Invoke-WebRequest): "La operación sobrepasó el tiempo de espera."
+-> Calentamiento (no medido)...
+-> Restaurando BD (stock=1000, version=0), VACUUM y CHECKPOINT...
+-> Midiendo con k6...
+
+
+  Ôûê TOTAL RESULTS
+
+    checks_total.......: 403038  5373.700219/s
+    checks_succeeded...: 100.00% 403038 out of 403038
+    checks_failed......: 0.00%   0 out of 403038
+
+    Ô£ô respuesta esperada (200/400/409)
+
+    CUSTOM
+    app_conflict...................: 0      0/s
+    app_error......................: 0      0/s
+    app_out_of_stock...............: 0      0/s
+    app_success....................: 403038 5373.700219/s
+
+    HTTP
+    http_req_duration..............: avg=167.38ms min=3.17ms med=177.19ms max=311.92ms p(90)=203.14ms p(95)=211.6ms
+      { expected_response:true }...: avg=167.38ms min=3.17ms med=177.19ms max=311.92ms p(90)=203.14ms p(95)=211.6ms
+    http_req_failed................: 0.00%  0 out of 403038
+    http_reqs......................: 403038 5373.700219/s
+
+    EXECUTION
+    iteration_duration.............: avg=167.56ms min=3.19ms med=177.37ms max=311.92ms p(90)=203.32ms p(95)=211.79ms
+    iterations.....................: 403038 5373.700219/s
+    vus............................: 17     min=17          max=1000
+    vus_max........................: 1000   min=1000        max=1000
+
+    NETWORK
+    data_received..................: 65 MB  861 kB/s
+    data_sent......................: 71 MB  943 kB/s
+
+
+
+-> Auditando estado final del inventario...
+OK  req=403038  thr=5373.7 req/s  lat_media=167.38 ms  409=0  400=0  errores=0  auditoria_consistente=True
+
+==================================================
+[20/60] B1_pcc_v100_4   (estrategia=pcc, carga=v100, stock=1000, conjunto caliente=2000)
+==================================================
+-> Iniciando aplicacion (JVM nueva, -Xms1g -Xmx1g)...
+PS>ErrorTerminación(Invoke-WebRequest): "La operación sobrepasó el tiempo de espera."
+-> Calentamiento (no medido)...
+-> Restaurando BD (stock=1000, version=0), VACUUM y CHECKPOINT...
+-> Midiendo con k6...
+
+
+  Ôûê TOTAL RESULTS
+
+    checks_total.......: 348126  4641.540531/s
+    checks_succeeded...: 100.00% 348126 out of 348126
+    checks_failed......: 0.00%   0 out of 348126
+
+    Ô£ô respuesta esperada (200/400/409)
+
+    CUSTOM
+    app_conflict...................: 0      0/s
+    app_error......................: 0      0/s
+    app_out_of_stock...............: 0      0/s
+    app_success....................: 348126 4641.540531/s
+
+    HTTP
+    http_req_duration..............: avg=19.17ms min=3.15ms med=18.64ms max=287.53ms p(90)=25.39ms p(95)=27.91ms
+      { expected_response:true }...: avg=19.17ms min=3.15ms med=18.64ms max=287.53ms p(90)=25.39ms p(95)=27.91ms
+    http_req_failed................: 0.00%  0 out of 348126
+    http_reqs......................: 348126 4641.540531/s
+
+    EXECUTION
+    iteration_duration.............: avg=19.36ms min=3.15ms med=18.83ms max=288.11ms p(90)=25.59ms p(95)=28.12ms
+    iterations.....................: 348126 4641.540531/s
+    vus............................: 1      min=1           max=100
+    vus_max........................: 100    min=100         max=100
+
+    NETWORK
+    data_received..................: 56 MB  744 kB/s
+    data_sent......................: 61 MB  815 kB/s
+
+
+
+-> Auditando estado final del inventario...
+OK  req=348126  thr=4641.5 req/s  lat_media=19.17 ms  409=0  400=0  errores=0  auditoria_consistente=True
+
+==================================================
+[21/60] B1_occ_v100_4   (estrategia=occ, carga=v100, stock=1000, conjunto caliente=2000)
+==================================================
+-> Iniciando aplicacion (JVM nueva, -Xms1g -Xmx1g)...
+PS>ErrorTerminación(Invoke-WebRequest): "La operación sobrepasó el tiempo de espera."
+-> Calentamiento (no medido)...
+-> Restaurando BD (stock=1000, version=0), VACUUM y CHECKPOINT...
+-> Midiendo con k6...
+
+
+  Ôûê TOTAL RESULTS
+
+    checks_total.......: 360289  4803.641301/s
+    checks_succeeded...: 100.00% 360289 out of 360289
+    checks_failed......: 0.00%   0 out of 360289
+
+    Ô£ô respuesta esperada (200/400/409)
+
+    CUSTOM
+    app_conflict...................: 6975   92.995895/s
+    app_error......................: 0      0/s
+    app_out_of_stock...............: 0      0/s
+    app_success....................: 353314 4710.645405/s
+
+    HTTP
+    http_req_duration..............: avg=18.51ms min=1.87ms med=18.32ms max=72.79ms p(90)=24.98ms p(95)=27.33ms
+      { expected_response:true }...: avg=18.51ms min=1.87ms med=18.32ms max=72.79ms p(90)=24.98ms p(95)=27.33ms
+    http_req_failed................: 0.00%  0 out of 360289
+    http_reqs......................: 360289 4803.641301/s
+
+    EXECUTION
+    iteration_duration.............: avg=18.71ms min=1.87ms med=18.51ms max=74.69ms p(90)=25.19ms p(95)=27.56ms
+    iterations.....................: 360289 4803.641301/s
+    vus............................: 1      min=1           max=100
+    vus_max........................: 100    min=100         max=100
+
+    NETWORK
+    data_received..................: 58 MB  770 kB/s
+    data_sent......................: 63 MB  843 kB/s
+
+
+
+-> Auditando estado final del inventario...
+OK  req=360289  thr=4803.6 req/s  lat_media=18.52 ms  409=6975  400=0  errores=0  auditoria_consistente=True
+
+==================================================
+[22/60] B1_pcc_v500_4   (estrategia=pcc, carga=v500, stock=1000, conjunto caliente=2000)
+==================================================
+-> Iniciando aplicacion (JVM nueva, -Xms1g -Xmx1g)...
+PS>ErrorTerminación(Invoke-WebRequest): "La operación sobrepasó el tiempo de espera."
+-> Calentamiento (no medido)...
+-> Restaurando BD (stock=1000, version=0), VACUUM y CHECKPOINT...
+-> Midiendo con k6...
+
+
+  Ôûê TOTAL RESULTS
+
+    checks_total.......: 404732  5396.362543/s
+    checks_succeeded...: 100.00% 404732 out of 404732
+    checks_failed......: 0.00%   0 out of 404732
+
+    Ô£ô respuesta esperada (200/400/409)
+
+    CUSTOM
+    app_conflict...................: 0      0/s
+    app_error......................: 0      0/s
+    app_out_of_stock...............: 0      0/s
+    app_success....................: 404732 5396.362543/s
+
+    HTTP
+    http_req_duration..............: avg=83.2ms  min=3.16ms med=85.96ms max=224.56ms p(90)=106.55ms p(95)=113.16ms
+      { expected_response:true }...: avg=83.2ms  min=3.16ms med=85.96ms max=224.56ms p(90)=106.55ms p(95)=113.16ms
+    http_req_failed................: 0.00%  0 out of 404732
+    http_reqs......................: 404732 5396.362543/s
+
+    EXECUTION
+    iteration_duration.............: avg=83.39ms min=3.16ms med=86.12ms max=224.56ms p(90)=106.74ms p(95)=113.37ms
+    iterations.....................: 404732 5396.362543/s
+    vus............................: 5      min=5           max=500
+    vus_max........................: 500    min=500         max=500
+
+    NETWORK
+    data_received..................: 65 MB  864 kB/s
+    data_sent......................: 71 MB  947 kB/s
+
+
+
+-> Auditando estado final del inventario...
+OK  req=404732  thr=5396.4 req/s  lat_media=83.21 ms  409=0  400=0  errores=0  auditoria_consistente=True
+
+==================================================
+[23/60] B1_occ_v500_4   (estrategia=occ, carga=v500, stock=1000, conjunto caliente=2000)
+==================================================
+-> Iniciando aplicacion (JVM nueva, -Xms1g -Xmx1g)...
+PS>ErrorTerminación(Invoke-WebRequest): "La operación sobrepasó el tiempo de espera."
+-> Calentamiento (no medido)...
+-> Restaurando BD (stock=1000, version=0), VACUUM y CHECKPOINT...
+-> Midiendo con k6...
+
+
+  Ôûê TOTAL RESULTS
+
+    checks_total.......: 414432  5525.655801/s
+    checks_succeeded...: 100.00% 414432 out of 414432
+    checks_failed......: 0.00%   0 out of 414432
+
+    Ô£ô respuesta esperada (200/400/409)
+
+    CUSTOM
+    app_conflict...................: 17640  235.195565/s
+    app_error......................: 0      0/s
+    app_out_of_stock...............: 0      0/s
+    app_success....................: 396792 5290.460236/s
+
+    HTTP
+    http_req_duration..............: avg=81.25ms min=3.16ms med=84.04ms max=184.51ms p(90)=103.81ms p(95)=110.29ms
+      { expected_response:true }...: avg=81.25ms min=3.16ms med=84.04ms max=184.51ms p(90)=103.81ms p(95)=110.29ms
+    http_req_failed................: 0.00%  0 out of 414432
+    http_reqs......................: 414432 5525.655801/s
+
+    EXECUTION
+    iteration_duration.............: avg=81.44ms min=3.16ms med=84.23ms max=184.51ms p(90)=104.01ms p(95)=110.49ms
+    iterations.....................: 414432 5525.655801/s
+    vus............................: 5      min=5           max=500
+    vus_max........................: 500    min=500         max=500
+
+    NETWORK
+    data_received..................: 66 MB  886 kB/s
+    data_sent......................: 73 MB  970 kB/s
+
+
+
+-> Auditando estado final del inventario...
+OK  req=414432  thr=5525.7 req/s  lat_media=81.25 ms  409=17640  400=0  errores=0  auditoria_consistente=True
+
+==================================================
+[24/60] B1_occ_v1000_4   (estrategia=occ, carga=v1000, stock=1000, conjunto caliente=2000)
+==================================================
+-> Iniciando aplicacion (JVM nueva, -Xms1g -Xmx1g)...
+PS>ErrorTerminación(Invoke-WebRequest): "La operación sobrepasó el tiempo de espera."
+-> Calentamiento (no medido)...
+-> Restaurando BD (stock=1000, version=0), VACUUM y CHECKPOINT...
+-> Midiendo con k6...
+
+
+  Ôûê TOTAL RESULTS
+
+    checks_total.......: 405627  5408.210423/s
+    checks_succeeded...: 100.00% 405627 out of 405627
+    checks_failed......: 0.00%   0 out of 405627
+
+    Ô£ô respuesta esperada (200/400/409)
+
+    CUSTOM
+    app_conflict...................: 17690  235.860143/s
+    app_error......................: 0      0/s
+    app_out_of_stock...............: 0      0/s
+    app_success....................: 387937 5172.35028/s
+
+    HTTP
+    http_req_duration..............: avg=166.29ms min=2.91ms med=175.16ms max=681.88ms p(90)=200.81ms p(95)=209.48ms
+      { expected_response:true }...: avg=166.29ms min=2.91ms med=175.16ms max=681.88ms p(90)=200.81ms p(95)=209.48ms
+    http_req_failed................: 0.00%  0 out of 405627
+    http_reqs......................: 405627 5408.210423/s
+
+    EXECUTION
+    iteration_duration.............: avg=166.49ms min=2.91ms med=175.35ms max=682.39ms p(90)=201.02ms p(95)=209.68ms
+    iterations.....................: 405627 5408.210423/s
+    vus............................: 18     min=18          max=1000
+    vus_max........................: 1000   min=1000        max=1000
+
+    NETWORK
+    data_received..................: 65 MB  867 kB/s
+    data_sent......................: 71 MB  949 kB/s
+
+
+
+-> Auditando estado final del inventario...
+OK  req=405627  thr=5408.2 req/s  lat_media=166.3 ms  409=17690  400=0  errores=0  auditoria_consistente=True
+
+==================================================
+[25/60] B1_occ_v500_5   (estrategia=occ, carga=v500, stock=1000, conjunto caliente=2000)
+==================================================
+-> Iniciando aplicacion (JVM nueva, -Xms1g -Xmx1g)...
+PS>ErrorTerminación(Invoke-WebRequest): "La operación sobrepasó el tiempo de espera."
+-> Calentamiento (no medido)...
+-> Restaurando BD (stock=1000, version=0), VACUUM y CHECKPOINT...
+-> Midiendo con k6...
+
+
+  Ôûê TOTAL RESULTS
+
+    checks_total.......: 404544  5393.747997/s
+    checks_succeeded...: 100.00% 404544 out of 404544
+    checks_failed......: 0.00%   0 out of 404544
+
+    Ô£ô respuesta esperada (200/400/409)
+
+    CUSTOM
+    app_conflict...................: 17078  227.699405/s
+    app_error......................: 0      0/s
+    app_out_of_stock...............: 0      0/s
+    app_success....................: 387466 5166.048591/s
+
+    HTTP
+    http_req_duration..............: avg=83.25ms min=3.2ms  med=85.39ms max=507.36ms p(90)=106.42ms p(95)=113.4ms
+      { expected_response:true }...: avg=83.25ms min=3.2ms  med=85.39ms max=507.36ms p(90)=106.42ms p(95)=113.4ms
+    http_req_failed................: 0.00%  0 out of 404544
+    http_reqs......................: 404544 5393.747997/s
+
+    EXECUTION
+    iteration_duration.............: avg=83.43ms min=3.48ms med=85.56ms max=507.36ms p(90)=106.63ms p(95)=113.58ms
+    iterations.....................: 404544 5393.747997/s
+    vus............................: 5      min=5           max=500
+    vus_max........................: 500    min=500         max=500
+
+    NETWORK
+    data_received..................: 65 MB  864 kB/s
+    data_sent......................: 71 MB  947 kB/s
+
+
+
+-> Auditando estado final del inventario...
+OK  req=404544  thr=5393.7 req/s  lat_media=83.25 ms  409=17078  400=0  errores=0  auditoria_consistente=True
+
+==================================================
+[26/60] B1_pcc_v500_5   (estrategia=pcc, carga=v500, stock=1000, conjunto caliente=2000)
+==================================================
+-> Iniciando aplicacion (JVM nueva, -Xms1g -Xmx1g)...
+PS>ErrorTerminación(Invoke-WebRequest): "La operación sobrepasó el tiempo de espera."
+-> Calentamiento (no medido)...
+-> Restaurando BD (stock=1000, version=0), VACUUM y CHECKPOINT...
+-> Midiendo con k6...
+
+
+  Ôûê TOTAL RESULTS
+
+    checks_total.......: 406738  5422.96914/s
+    checks_succeeded...: 100.00% 406738 out of 406738
+    checks_failed......: 0.00%   0 out of 406738
+
+    Ô£ô respuesta esperada (200/400/409)
+
+    CUSTOM
+    app_conflict...................: 0      0/s
+    app_error......................: 0      0/s
+    app_out_of_stock...............: 0      0/s
+    app_success....................: 406738 5422.96914/s
+
+    HTTP
+    http_req_duration..............: avg=82.82ms min=3.14ms med=84.84ms max=535.86ms p(90)=106.41ms p(95)=113.7ms
+      { expected_response:true }...: avg=82.82ms min=3.14ms med=84.84ms max=535.86ms p(90)=106.41ms p(95)=113.7ms
+    http_req_failed................: 0.00%  0 out of 406738
+    http_reqs......................: 406738 5422.96914/s
+
+    EXECUTION
+    iteration_duration.............: avg=83ms    min=3.14ms med=85.02ms max=535.86ms p(90)=106.62ms p(95)=113.9ms
+    iterations.....................: 406738 5422.96914/s
+    vus............................: 6      min=6           max=500
+    vus_max........................: 500    min=500         max=500
+
+    NETWORK
+    data_received..................: 65 MB  869 kB/s
+    data_sent......................: 71 MB  952 kB/s
+
+
+
+-> Auditando estado final del inventario...
+OK  req=406738  thr=5423 req/s  lat_media=82.82 ms  409=0  400=0  errores=0  auditoria_consistente=True
+
+==================================================
+[27/60] B1_pcc_v100_5   (estrategia=pcc, carga=v100, stock=1000, conjunto caliente=2000)
+==================================================
+-> Iniciando aplicacion (JVM nueva, -Xms1g -Xmx1g)...
+PS>ErrorTerminación(Invoke-WebRequest): "La operación sobrepasó el tiempo de espera."
+-> Calentamiento (no medido)...
+-> Restaurando BD (stock=1000, version=0), VACUUM y CHECKPOINT...
+-> Midiendo con k6...
+
+
+  Ôûê TOTAL RESULTS
+
+    checks_total.......: 359148  4788.369764/s
+    checks_succeeded...: 100.00% 359148 out of 359148
+    checks_failed......: 0.00%   0 out of 359148
+
+    Ô£ô respuesta esperada (200/400/409)
+
+    CUSTOM
+    app_conflict...................: 0      0/s
+    app_error......................: 0      0/s
+    app_out_of_stock...............: 0      0/s
+    app_success....................: 359148 4788.369764/s
+
+    HTTP
+    http_req_duration..............: avg=18.57ms min=1.54ms med=18.33ms max=68.38ms p(90)=25.13ms p(95)=27.68ms
+      { expected_response:true }...: avg=18.57ms min=1.54ms med=18.33ms max=68.38ms p(90)=25.13ms p(95)=27.68ms
+    http_req_failed................: 0.00%  0 out of 359148
+    http_reqs......................: 359148 4788.369764/s
+
+    EXECUTION
+    iteration_duration.............: avg=18.77ms min=2.67ms med=18.52ms max=68.38ms p(90)=25.35ms p(95)=27.89ms
+    iterations.....................: 359148 4788.369764/s
+    vus............................: 1      min=1           max=100
+    vus_max........................: 100    min=100         max=100
+
+    NETWORK
+    data_received..................: 58 MB  767 kB/s
+    data_sent......................: 63 MB  841 kB/s
+
+
+
+-> Auditando estado final del inventario...
+OK  req=359148  thr=4788.4 req/s  lat_media=18.58 ms  409=0  400=0  errores=0  auditoria_consistente=True
+
+==================================================
+[28/60] B1_occ_v100_5   (estrategia=occ, carga=v100, stock=1000, conjunto caliente=2000)
+==================================================
+-> Iniciando aplicacion (JVM nueva, -Xms1g -Xmx1g)...
+PS>ErrorTerminación(Invoke-WebRequest): "La operación sobrepasó el tiempo de espera."
+-> Calentamiento (no medido)...
+-> Restaurando BD (stock=1000, version=0), VACUUM y CHECKPOINT...
+-> Midiendo con k6...
+
+
+  Ôûê TOTAL RESULTS
+
+    checks_total.......: 362401  4831.950756/s
+    checks_succeeded...: 100.00% 362401 out of 362401
+    checks_failed......: 0.00%   0 out of 362401
+
+    Ô£ô respuesta esperada (200/400/409)
+
+    CUSTOM
+    app_conflict...................: 7076   94.345445/s
+    app_error......................: 0      0/s
+    app_out_of_stock...............: 0      0/s
+    app_success....................: 355325 4737.605312/s
+
+    HTTP
+    http_req_duration..............: avg=18.41ms min=2.59ms med=18.26ms max=406.49ms p(90)=24.4ms  p(95)=26.58ms
+      { expected_response:true }...: avg=18.41ms min=2.59ms med=18.26ms max=406.49ms p(90)=24.4ms  p(95)=26.58ms
+    http_req_failed................: 0.00%  0 out of 362401
+    http_reqs......................: 362401 4831.950756/s
+
+    EXECUTION
+    iteration_duration.............: avg=18.6ms  min=2.59ms med=18.45ms max=407ms    p(90)=24.61ms p(95)=26.79ms
+    iterations.....................: 362401 4831.950756/s
+    vus............................: 1      min=1           max=100
+    vus_max........................: 100    min=100         max=100
+
+    NETWORK
+    data_received..................: 58 MB  774 kB/s
+    data_sent......................: 64 MB  848 kB/s
+
+
+
+-> Auditando estado final del inventario...
+OK  req=362401  thr=4832 req/s  lat_media=18.41 ms  409=7076  400=0  errores=0  auditoria_consistente=True
+
+==================================================
+[29/60] B1_occ_v1000_5   (estrategia=occ, carga=v1000, stock=1000, conjunto caliente=2000)
+==================================================
+-> Iniciando aplicacion (JVM nueva, -Xms1g -Xmx1g)...
+PS>ErrorTerminación(Invoke-WebRequest): "La operación sobrepasó el tiempo de espera."
+-> Calentamiento (no medido)...
+-> Restaurando BD (stock=1000, version=0), VACUUM y CHECKPOINT...
+-> Midiendo con k6...
+
+
+  Ôûê TOTAL RESULTS
+
+    checks_total.......: 410996  5479.722539/s
+    checks_succeeded...: 100.00% 410996 out of 410996
+    checks_failed......: 0.00%   0 out of 410996
+
+    Ô£ô respuesta esperada (200/400/409)
+
+    CUSTOM
+    app_conflict...................: 17544  233.910433/s
+    app_error......................: 0      0/s
+    app_out_of_stock...............: 0      0/s
+    app_success....................: 393452 5245.812106/s
+
+    HTTP
+    http_req_duration..............: avg=164.13ms min=3.14ms med=173.12ms max=302.23ms p(90)=199.78ms p(95)=208.58ms
+      { expected_response:true }...: avg=164.13ms min=3.14ms med=173.12ms max=302.23ms p(90)=199.78ms p(95)=208.58ms
+    http_req_failed................: 0.00%  0 out of 410996
+    http_reqs......................: 410996 5479.722539/s
+
+    EXECUTION
+    iteration_duration.............: avg=164.32ms min=3.14ms med=173.29ms max=302.23ms p(90)=199.98ms p(95)=208.78ms
+    iterations.....................: 410996 5479.722539/s
+    vus............................: 20     min=20          max=1000
+    vus_max........................: 1000   min=1000        max=1000
+
+    NETWORK
+    data_received..................: 66 MB  878 kB/s
+    data_sent......................: 72 MB  962 kB/s
+
+
+
+-> Auditando estado final del inventario...
+OK  req=410996  thr=5479.7 req/s  lat_media=164.14 ms  409=17544  400=0  errores=0  auditoria_consistente=True
+
+==================================================
+[30/60] B1_pcc_v1000_5   (estrategia=pcc, carga=v1000, stock=1000, conjunto caliente=2000)
+==================================================
+-> Iniciando aplicacion (JVM nueva, -Xms1g -Xmx1g)...
+PS>ErrorTerminación(Invoke-WebRequest): "La operación sobrepasó el tiempo de espera."
+-> Calentamiento (no medido)...
+-> Restaurando BD (stock=1000, version=0), VACUUM y CHECKPOINT...
+-> Midiendo con k6...
+
+
+  Ôûê TOTAL RESULTS
+
+    checks_total.......: 405766  5410.170254/s
+    checks_succeeded...: 100.00% 405766 out of 405766
+    checks_failed......: 0.00%   0 out of 405766
+
+    Ô£ô respuesta esperada (200/400/409)
+
+    CUSTOM
+    app_conflict...................: 0      0/s
+    app_error......................: 0      0/s
+    app_out_of_stock...............: 0      0/s
+    app_success....................: 405766 5410.170254/s
+
+    HTTP
+    http_req_duration..............: avg=166.25ms min=3.67ms med=175.92ms max=304.7ms  p(90)=201.5ms  p(95)=210.11ms
+      { expected_response:true }...: avg=166.25ms min=3.67ms med=175.92ms max=304.7ms  p(90)=201.5ms  p(95)=210.11ms
+    http_req_failed................: 0.00%  0 out of 405766
+    http_reqs......................: 405766 5410.170254/s
+
+    EXECUTION
+    iteration_duration.............: avg=166.44ms min=3.67ms med=176.1ms  max=305.04ms p(90)=201.69ms p(95)=210.28ms
+    iterations.....................: 405766 5410.170254/s
+    vus............................: 18     min=18          max=1000
+    vus_max........................: 1000   min=1000        max=1000
+
+    NETWORK
+    data_received..................: 65 MB  867 kB/s
+    data_sent......................: 71 MB  950 kB/s
+
+
+
+-> Auditando estado final del inventario...
+OK  req=405766  thr=5410.2 req/s  lat_media=166.26 ms  409=0  400=0  errores=0  auditoria_consistente=True
+
+==================================================
+[31/60] B1_occ_v100_6   (estrategia=occ, carga=v100, stock=1000, conjunto caliente=2000)
+==================================================
+-> Iniciando aplicacion (JVM nueva, -Xms1g -Xmx1g)...
+PS>ErrorTerminación(Invoke-WebRequest): "La operación sobrepasó el tiempo de espera."
+-> Calentamiento (no medido)...
+-> Restaurando BD (stock=1000, version=0), VACUUM y CHECKPOINT...
+-> Midiendo con k6...
+
+
+  Ôûê TOTAL RESULTS
+
+    checks_total.......: 347649  4635.241337/s
+    checks_succeeded...: 100.00% 347649 out of 347649
+    checks_failed......: 0.00%   0 out of 347649
+
+    Ô£ô respuesta esperada (200/400/409)
+
+    CUSTOM
+    app_conflict...................: 6925   92.331766/s
+    app_error......................: 0      0/s
+    app_out_of_stock...............: 0      0/s
+    app_success....................: 340724 4542.90957/s
+
+    HTTP
+    http_req_duration..............: avg=19.19ms min=2.65ms med=18.91ms max=60.85ms p(90)=25.29ms p(95)=27.51ms
+      { expected_response:true }...: avg=19.19ms min=2.65ms med=18.91ms max=60.85ms p(90)=25.29ms p(95)=27.51ms
+    http_req_failed................: 0.00%  0 out of 347649
+    http_reqs......................: 347649 4635.241337/s
+
+    EXECUTION
+    iteration_duration.............: avg=19.39ms min=2.79ms med=19.09ms max=61.44ms p(90)=25.51ms p(95)=27.75ms
+    iterations.....................: 347649 4635.241337/s
+    vus............................: 1      min=1           max=100
+    vus_max........................: 100    min=100         max=100
+
+    NETWORK
+    data_received..................: 56 MB  743 kB/s
+    data_sent......................: 61 MB  814 kB/s
+
+
+
+-> Auditando estado final del inventario...
+OK  req=347649  thr=4635.2 req/s  lat_media=19.19 ms  409=6925  400=0  errores=0  auditoria_consistente=True
+
+==================================================
+[32/60] B1_occ_v1000_6   (estrategia=occ, carga=v1000, stock=1000, conjunto caliente=2000)
+==================================================
+-> Iniciando aplicacion (JVM nueva, -Xms1g -Xmx1g)...
+PS>ErrorTerminación(Invoke-WebRequest): "La operación sobrepasó el tiempo de espera."
+-> Calentamiento (no medido)...
+-> Restaurando BD (stock=1000, version=0), VACUUM y CHECKPOINT...
+-> Midiendo con k6...
+
+
+  Ôûê TOTAL RESULTS
+
+    checks_total.......: 412181  5495.457884/s
+    checks_succeeded...: 100.00% 412181 out of 412181
+    checks_failed......: 0.00%   0 out of 412181
+
+    Ô£ô respuesta esperada (200/400/409)
+
+    CUSTOM
+    app_conflict...................: 17884  238.440803/s
+    app_error......................: 0      0/s
+    app_out_of_stock...............: 0      0/s
+    app_success....................: 394297 5257.017081/s
+
+    HTTP
+    http_req_duration..............: avg=163.66ms min=3.18ms med=172.11ms max=327.48ms p(90)=198.81ms p(95)=207.93ms
+      { expected_response:true }...: avg=163.66ms min=3.18ms med=172.11ms max=327.48ms p(90)=198.81ms p(95)=207.93ms
+    http_req_failed................: 0.00%  0 out of 412181
+    http_reqs......................: 412181 5495.457884/s
+
+    EXECUTION
+    iteration_duration.............: avg=163.85ms min=3.18ms med=172.29ms max=327.48ms p(90)=199.01ms p(95)=208.15ms
+    iterations.....................: 412181 5495.457884/s
+    vus............................: 20     min=20          max=1000
+    vus_max........................: 1000   min=1000        max=1000
+
+    NETWORK
+    data_received..................: 66 MB  881 kB/s
+    data_sent......................: 72 MB  965 kB/s
+
+
+
+-> Auditando estado final del inventario...
+OK  req=412181  thr=5495.5 req/s  lat_media=163.66 ms  409=17884  400=0  errores=0  auditoria_consistente=True
+
+==================================================
+[33/60] B1_occ_v500_6   (estrategia=occ, carga=v500, stock=1000, conjunto caliente=2000)
+==================================================
+-> Iniciando aplicacion (JVM nueva, -Xms1g -Xmx1g)...
+PS>ErrorTerminación(Invoke-WebRequest): "La operación sobrepasó el tiempo de espera."
+-> Calentamiento (no medido)...
+-> Restaurando BD (stock=1000, version=0), VACUUM y CHECKPOINT...
+-> Midiendo con k6...
+
+
+  Ôûê TOTAL RESULTS
+
+    checks_total.......: 403210  5375.98558/s
+    checks_succeeded...: 100.00% 403210 out of 403210
+    checks_failed......: 0.00%   0 out of 403210
+
+    Ô£ô respuesta esperada (200/400/409)
+
+    CUSTOM
+    app_conflict...................: 17175  228.993706/s
+    app_error......................: 0      0/s
+    app_out_of_stock...............: 0      0/s
+    app_success....................: 386035 5146.991873/s
+
+    HTTP
+    http_req_duration..............: avg=83.52ms min=3.17ms med=85.96ms max=477.21ms p(90)=106.43ms p(95)=112.87ms
+      { expected_response:true }...: avg=83.52ms min=3.17ms med=85.96ms max=477.21ms p(90)=106.43ms p(95)=112.87ms
+    http_req_failed................: 0.00%  0 out of 403210
+    http_reqs......................: 403210 5375.98558/s
+
+    EXECUTION
+    iteration_duration.............: avg=83.7ms  min=3.17ms med=86.13ms max=477.72ms p(90)=106.63ms p(95)=113.07ms
+    iterations.....................: 403210 5375.98558/s
+    vus............................: 5      min=5           max=500
+    vus_max........................: 500    min=500         max=500
+
+    NETWORK
+    data_received..................: 65 MB  862 kB/s
+    data_sent......................: 71 MB  944 kB/s
+
+
+
+-> Auditando estado final del inventario...
+OK  req=403210  thr=5376 req/s  lat_media=83.53 ms  409=17175  400=0  errores=0  auditoria_consistente=True
+
+==================================================
+[34/60] B1_pcc_v1000_6   (estrategia=pcc, carga=v1000, stock=1000, conjunto caliente=2000)
+==================================================
+-> Iniciando aplicacion (JVM nueva, -Xms1g -Xmx1g)...
+PS>ErrorTerminación(Invoke-WebRequest): "La operación sobrepasó el tiempo de espera."
+-> Calentamiento (no medido)...
+-> Restaurando BD (stock=1000, version=0), VACUUM y CHECKPOINT...
+-> Midiendo con k6...
+
+
+  Ôûê TOTAL RESULTS
+
+    checks_total.......: 408193  5442.379672/s
+    checks_succeeded...: 100.00% 408193 out of 408193
+    checks_failed......: 0.00%   0 out of 408193
+
+    Ô£ô respuesta esperada (200/400/409)
+
+    CUSTOM
+    app_conflict...................: 0      0/s
+    app_error......................: 0      0/s
+    app_out_of_stock...............: 0      0/s
+    app_success....................: 408193 5442.379672/s
+
+    HTTP
+    http_req_duration..............: avg=165.26ms min=3.13ms med=173.62ms max=594.17ms p(90)=201.69ms p(95)=211.15ms
+      { expected_response:true }...: avg=165.26ms min=3.13ms med=173.62ms max=594.17ms p(90)=201.69ms p(95)=211.15ms
+    http_req_failed................: 0.00%  0 out of 408193
+    http_reqs......................: 408193 5442.379672/s
+
+    EXECUTION
+    iteration_duration.............: avg=165.45ms min=3.13ms med=173.79ms max=594.17ms p(90)=201.87ms p(95)=211.34ms
+    iterations.....................: 408193 5442.379672/s
+    vus............................: 19     min=19          max=1000
+    vus_max........................: 1000   min=1000        max=1000
+
+    NETWORK
+    data_received..................: 65 MB  872 kB/s
+    data_sent......................: 72 MB  956 kB/s
+
+
+
+-> Auditando estado final del inventario...
+OK  req=408193  thr=5442.4 req/s  lat_media=165.27 ms  409=0  400=0  errores=0  auditoria_consistente=True
+
+==================================================
+[35/60] B1_pcc_v500_6   (estrategia=pcc, carga=v500, stock=1000, conjunto caliente=2000)
+==================================================
+-> Iniciando aplicacion (JVM nueva, -Xms1g -Xmx1g)...
+PS>ErrorTerminación(Invoke-WebRequest): "La operación sobrepasó el tiempo de espera."
+-> Calentamiento (no medido)...
+-> Restaurando BD (stock=1000, version=0), VACUUM y CHECKPOINT...
+-> Midiendo con k6...
+
+
+  Ôûê TOTAL RESULTS
+
+    checks_total.......: 409981  5466.229551/s
+    checks_succeeded...: 100.00% 409981 out of 409981
+    checks_failed......: 0.00%   0 out of 409981
+
+    Ô£ô respuesta esperada (200/400/409)
+
+    CUSTOM
+    app_conflict...................: 0      0/s
+    app_error......................: 0      0/s
+    app_out_of_stock...............: 0      0/s
+    app_success....................: 409981 5466.229551/s
+
+    HTTP
+    http_req_duration..............: avg=82.13ms min=3.11ms med=84.82ms max=221.61ms p(90)=106.43ms p(95)=113.67ms
+      { expected_response:true }...: avg=82.13ms min=3.11ms med=84.82ms max=221.61ms p(90)=106.43ms p(95)=113.67ms
+    http_req_failed................: 0.00%  0 out of 409981
+    http_reqs......................: 409981 5466.229551/s
+
+    EXECUTION
+    iteration_duration.............: avg=82.32ms min=3.12ms med=85ms    max=222.12ms p(90)=106.62ms p(95)=113.88ms
+    iterations.....................: 409981 5466.229551/s
+    vus............................: 5      min=5           max=500
+    vus_max........................: 500    min=500         max=500
+
+    NETWORK
+    data_received..................: 66 MB  876 kB/s
+    data_sent......................: 72 MB  960 kB/s
+
+
+
+-> Auditando estado final del inventario...
+OK  req=409981  thr=5466.2 req/s  lat_media=82.14 ms  409=0  400=0  errores=0  auditoria_consistente=True
+
+==================================================
+[36/60] B1_pcc_v100_6   (estrategia=pcc, carga=v100, stock=1000, conjunto caliente=2000)
+==================================================
+-> Iniciando aplicacion (JVM nueva, -Xms1g -Xmx1g)...
+PS>ErrorTerminación(Invoke-WebRequest): "La operación sobrepasó el tiempo de espera."
+-> Calentamiento (no medido)...
+-> Restaurando BD (stock=1000, version=0), VACUUM y CHECKPOINT...
+-> Midiendo con k6...
+
+
+  Ôûê TOTAL RESULTS
+
+    checks_total.......: 345219  4602.680931/s
+    checks_succeeded...: 100.00% 345219 out of 345219
+    checks_failed......: 0.00%   0 out of 345219
+
+    Ô£ô respuesta esperada (200/400/409)
+
+    CUSTOM
+    app_conflict...................: 0      0/s
+    app_error......................: 0      0/s
+    app_out_of_stock...............: 0      0/s
+    app_success....................: 345219 4602.680931/s
+
+    HTTP
+    http_req_duration..............: avg=19.33ms min=2.65ms med=18.85ms max=292.99ms p(90)=25.2ms  p(95)=27.57ms
+      { expected_response:true }...: avg=19.33ms min=2.65ms med=18.85ms max=292.99ms p(90)=25.2ms  p(95)=27.57ms
+    http_req_failed................: 0.00%  0 out of 345219
+    http_reqs......................: 345219 4602.680931/s
+
+    EXECUTION
+    iteration_duration.............: avg=19.52ms min=2.65ms med=19.05ms max=292.99ms p(90)=25.41ms p(95)=27.81ms
+    iterations.....................: 345219 4602.680931/s
+    vus............................: 1      min=1           max=100
+    vus_max........................: 100    min=100         max=100
+
+    NETWORK
+    data_received..................: 55 MB  737 kB/s
+    data_sent......................: 61 MB  808 kB/s
+
+
+
+-> Auditando estado final del inventario...
+OK  req=345219  thr=4602.7 req/s  lat_media=19.33 ms  409=0  400=0  errores=0  auditoria_consistente=True
+
+==================================================
+[37/60] B1_occ_v500_7   (estrategia=occ, carga=v500, stock=1000, conjunto caliente=2000)
+==================================================
+-> Iniciando aplicacion (JVM nueva, -Xms1g -Xmx1g)...
+PS>ErrorTerminación(Invoke-WebRequest): "La operación sobrepasó el tiempo de espera."
+-> Calentamiento (no medido)...
+-> Restaurando BD (stock=1000, version=0), VACUUM y CHECKPOINT...
+-> Midiendo con k6...
+
+
+  Ôûê TOTAL RESULTS
+
+    checks_total.......: 404319  5390.582578/s
+    checks_succeeded...: 100.00% 404319 out of 404319
+    checks_failed......: 0.00%   0 out of 404319
+
+    Ô£ô respuesta esperada (200/400/409)
+
+    CUSTOM
+    app_conflict...................: 17169  228.905672/s
+    app_error......................: 0      0/s
+    app_out_of_stock...............: 0      0/s
+    app_success....................: 387150 5161.676907/s
+
+    HTTP
+    http_req_duration..............: avg=83.28ms min=3.21ms med=85.85ms max=386.91ms p(90)=105.86ms p(95)=112.4ms
+      { expected_response:true }...: avg=83.28ms min=3.21ms med=85.85ms max=386.91ms p(90)=105.86ms p(95)=112.4ms
+    http_req_failed................: 0.00%  0 out of 404319
+    http_reqs......................: 404319 5390.582578/s
+
+    EXECUTION
+    iteration_duration.............: avg=83.47ms min=3.67ms med=86.03ms max=387.43ms p(90)=106.07ms p(95)=112.64ms
+    iterations.....................: 404319 5390.582578/s
+    vus............................: 6      min=6           max=500
+    vus_max........................: 500    min=500         max=500
+
+    NETWORK
+    data_received..................: 65 MB  864 kB/s
+    data_sent......................: 71 MB  946 kB/s
+
+
+
+-> Auditando estado final del inventario...
+OK  req=404319  thr=5390.6 req/s  lat_media=83.28 ms  409=17169  400=0  errores=0  auditoria_consistente=True
+
+==================================================
+[38/60] B1_pcc_v500_7   (estrategia=pcc, carga=v500, stock=1000, conjunto caliente=2000)
+==================================================
+-> Iniciando aplicacion (JVM nueva, -Xms1g -Xmx1g)...
+PS>ErrorTerminación(Invoke-WebRequest): "La operación sobrepasó el tiempo de espera."
+-> Calentamiento (no medido)...
+-> Restaurando BD (stock=1000, version=0), VACUUM y CHECKPOINT...
+-> Midiendo con k6...
+
+
+  Ôûê TOTAL RESULTS
+
+    checks_total.......: 394579  5260.976088/s
+    checks_succeeded...: 100.00% 394579 out of 394579
+    checks_failed......: 0.00%   0 out of 394579
+
+    Ô£ô respuesta esperada (200/400/409)
+
+    CUSTOM
+    app_conflict...................: 0      0/s
+    app_error......................: 0      0/s
+    app_out_of_stock...............: 0      0/s
+    app_success....................: 394579 5260.976088/s
+
+    HTTP
+    http_req_duration..............: avg=85.34ms min=3.18ms med=87.41ms max=494.58ms p(90)=109.01ms p(95)=116.28ms
+      { expected_response:true }...: avg=85.34ms min=3.18ms med=87.41ms max=494.58ms p(90)=109.01ms p(95)=116.28ms
+    http_req_failed................: 0.00%  0 out of 394579
+    http_reqs......................: 394579 5260.976088/s
+
+    EXECUTION
+    iteration_duration.............: avg=85.53ms min=3.18ms med=87.6ms  max=494.58ms p(90)=109.22ms p(95)=116.49ms
+    iterations.....................: 394579 5260.976088/s
+    vus............................: 5      min=5           max=500
+    vus_max........................: 500    min=500         max=500
+
+    NETWORK
+    data_received..................: 63 MB  843 kB/s
+    data_sent......................: 69 MB  924 kB/s
+
+
+
+-> Auditando estado final del inventario...
+OK  req=394579  thr=5261 req/s  lat_media=85.35 ms  409=0  400=0  errores=0  auditoria_consistente=True
+
+==================================================
+[39/60] B1_pcc_v100_7   (estrategia=pcc, carga=v100, stock=1000, conjunto caliente=2000)
+==================================================
+-> Iniciando aplicacion (JVM nueva, -Xms1g -Xmx1g)...
+PS>ErrorTerminación(Invoke-WebRequest): "La operación sobrepasó el tiempo de espera."
+-> Calentamiento (no medido)...
+-> Restaurando BD (stock=1000, version=0), VACUUM y CHECKPOINT...
+-> Midiendo con k6...
+
+
+  Ôûê TOTAL RESULTS
+
+    checks_total.......: 340957  4545.977805/s
+    checks_succeeded...: 100.00% 340957 out of 340957
+    checks_failed......: 0.00%   0 out of 340957
+
+    Ô£ô respuesta esperada (200/400/409)
+
+    CUSTOM
+    app_conflict...................: 0      0/s
+    app_error......................: 0      0/s
+    app_out_of_stock...............: 0      0/s
+    app_success....................: 340957 4545.977805/s
+
+    HTTP
+    http_req_duration..............: avg=19.57ms min=2.79ms med=19.21ms max=277.16ms p(90)=25.63ms p(95)=28.01ms
+      { expected_response:true }...: avg=19.57ms min=2.79ms med=19.21ms max=277.16ms p(90)=25.63ms p(95)=28.01ms
+    http_req_failed................: 0.00%  0 out of 340957
+    http_reqs......................: 340957 4545.977805/s
+
+    EXECUTION
+    iteration_duration.............: avg=19.77ms min=2.79ms med=19.4ms  max=277.16ms p(90)=25.86ms p(95)=28.26ms
+    iterations.....................: 340957 4545.977805/s
+    vus............................: 1      min=1           max=100
+    vus_max........................: 100    min=100         max=100
+
+    NETWORK
+    data_received..................: 55 MB  728 kB/s
+    data_sent......................: 60 MB  798 kB/s
+
+
+
+-> Auditando estado final del inventario...
+OK  req=340957  thr=4546 req/s  lat_media=19.58 ms  409=0  400=0  errores=0  auditoria_consistente=True
+
+==================================================
+[40/60] B1_occ_v1000_7   (estrategia=occ, carga=v1000, stock=1000, conjunto caliente=2000)
+==================================================
+-> Iniciando aplicacion (JVM nueva, -Xms1g -Xmx1g)...
+PS>ErrorTerminación(Invoke-WebRequest): "La operación sobrepasó el tiempo de espera."
+-> Calentamiento (no medido)...
+-> Restaurando BD (stock=1000, version=0), VACUUM y CHECKPOINT...
+-> Midiendo con k6...
+
+
+  Ôûê TOTAL RESULTS
+
+    checks_total.......: 407524  5433.356295/s
+    checks_succeeded...: 100.00% 407524 out of 407524
+    checks_failed......: 0.00%   0 out of 407524
+
+    Ô£ô respuesta esperada (200/400/409)
+
+    CUSTOM
+    app_conflict...................: 17436  232.467291/s
+    app_error......................: 0      0/s
+    app_out_of_stock...............: 0      0/s
+    app_success....................: 390088 5200.889004/s
+
+    HTTP
+    http_req_duration..............: avg=165.53ms min=3.13ms med=174.05ms max=621.07ms p(90)=200.71ms p(95)=209.64ms
+      { expected_response:true }...: avg=165.53ms min=3.13ms med=174.05ms max=621.07ms p(90)=200.71ms p(95)=209.64ms
+    http_req_failed................: 0.00%  0 out of 407524
+    http_reqs......................: 407524 5433.356295/s
+
+    EXECUTION
+    iteration_duration.............: avg=165.72ms min=3.13ms med=174.22ms max=621.07ms p(90)=200.9ms  p(95)=209.85ms
+    iterations.....................: 407524 5433.356295/s
+    vus............................: 18     min=18          max=1000
+    vus_max........................: 1000   min=1000        max=1000
+
+    NETWORK
+    data_received..................: 65 MB  871 kB/s
+    data_sent......................: 72 MB  954 kB/s
+
+
+
+-> Auditando estado final del inventario...
+OK  req=407524  thr=5433.4 req/s  lat_media=165.54 ms  409=17436  400=0  errores=0  auditoria_consistente=True
+
+==================================================
+[41/60] B1_pcc_v1000_7   (estrategia=pcc, carga=v1000, stock=1000, conjunto caliente=2000)
+==================================================
+-> Iniciando aplicacion (JVM nueva, -Xms1g -Xmx1g)...
+PS>ErrorTerminación(Invoke-WebRequest): "La operación sobrepasó el tiempo de espera."
+-> Calentamiento (no medido)...
+-> Restaurando BD (stock=1000, version=0), VACUUM y CHECKPOINT...
+-> Midiendo con k6...
+
+
+  Ôûê TOTAL RESULTS
+
+    checks_total.......: 412088  5494.344488/s
+    checks_succeeded...: 100.00% 412088 out of 412088
+    checks_failed......: 0.00%   0 out of 412088
+
+    Ô£ô respuesta esperada (200/400/409)
+
+    CUSTOM
+    app_conflict...................: 0      0/s
+    app_error......................: 0      0/s
+    app_out_of_stock...............: 0      0/s
+    app_success....................: 412088 5494.344488/s
+
+    HTTP
+    http_req_duration..............: avg=163.73ms min=3.68ms med=172.51ms max=430.03ms p(90)=199.41ms p(95)=208.4ms
+      { expected_response:true }...: avg=163.73ms min=3.68ms med=172.51ms max=430.03ms p(90)=199.41ms p(95)=208.4ms
+    http_req_failed................: 0.00%  0 out of 412088
+    http_reqs......................: 412088 5494.344488/s
+
+    EXECUTION
+    iteration_duration.............: avg=163.91ms min=3.71ms med=172.68ms max=430.03ms p(90)=199.63ms p(95)=208.61ms
+    iterations.....................: 412088 5494.344488/s
+    vus............................: 19     min=19          max=1000
+    vus_max........................: 1000   min=1000        max=1000
+
+    NETWORK
+    data_received..................: 66 MB  880 kB/s
+    data_sent......................: 72 MB  965 kB/s
+
+
+
+-> Auditando estado final del inventario...
+OK  req=412088  thr=5494.3 req/s  lat_media=163.73 ms  409=0  400=0  errores=0  auditoria_consistente=True
+
+==================================================
+[42/60] B1_occ_v100_7   (estrategia=occ, carga=v100, stock=1000, conjunto caliente=2000)
+==================================================
+-> Iniciando aplicacion (JVM nueva, -Xms1g -Xmx1g)...
+PS>ErrorTerminación(Invoke-WebRequest): "La operación sobrepasó el tiempo de espera."
+-> Calentamiento (no medido)...
+-> Restaurando BD (stock=1000, version=0), VACUUM y CHECKPOINT...
+-> Midiendo con k6...
+
+
+  Ôûê TOTAL RESULTS
+
+    checks_total.......: 346102  4614.386735/s
+    checks_succeeded...: 100.00% 346102 out of 346102
+    checks_failed......: 0.00%   0 out of 346102
+
+    Ô£ô respuesta esperada (200/400/409)
+
+    CUSTOM
+    app_conflict...................: 6989   93.180475/s
+    app_error......................: 0      0/s
+    app_out_of_stock...............: 0      0/s
+    app_success....................: 339113 4521.20626/s
+
+    HTTP
+    http_req_duration..............: avg=19.28ms min=3.1ms med=18.9ms max=301.65ms p(90)=25.29ms p(95)=27.51ms
+      { expected_response:true }...: avg=19.28ms min=3.1ms med=18.9ms max=301.65ms p(90)=25.29ms p(95)=27.51ms
+    http_req_failed................: 0.00%  0 out of 346102
+    http_reqs......................: 346102 4614.386735/s
+
+    EXECUTION
+    iteration_duration.............: avg=19.47ms min=3.1ms med=19.1ms max=301.65ms p(90)=25.51ms p(95)=27.74ms
+    iterations.....................: 346102 4614.386735/s
+    vus............................: 1      min=1           max=100
+    vus_max........................: 100    min=100         max=100
+
+    NETWORK
+    data_received..................: 56 MB  739 kB/s
+    data_sent......................: 61 MB  810 kB/s
+
+
+
+-> Auditando estado final del inventario...
+OK  req=346102  thr=4614.4 req/s  lat_media=19.28 ms  409=6989  400=0  errores=0  auditoria_consistente=True
+
+==================================================
+[43/60] B1_pcc_v1000_8   (estrategia=pcc, carga=v1000, stock=1000, conjunto caliente=2000)
+==================================================
+-> Iniciando aplicacion (JVM nueva, -Xms1g -Xmx1g)...
+PS>ErrorTerminación(Invoke-WebRequest): "La operación sobrepasó el tiempo de espera."
+-> Calentamiento (no medido)...
+-> Restaurando BD (stock=1000, version=0), VACUUM y CHECKPOINT...
+-> Midiendo con k6...
+
+
+  Ôûê TOTAL RESULTS
+
+    checks_total.......: 402857  5371.043081/s
+    checks_succeeded...: 100.00% 402857 out of 402857
+    checks_failed......: 0.00%   0 out of 402857
+
+    Ô£ô respuesta esperada (200/400/409)
+
+    CUSTOM
+    app_conflict...................: 0      0/s
+    app_error......................: 0      0/s
+    app_out_of_stock...............: 0      0/s
+    app_success....................: 402857 5371.043081/s
+
+    HTTP
+    http_req_duration..............: avg=167.45ms min=3.68ms med=176.32ms max=564.05ms p(90)=203.01ms p(95)=212.21ms
+      { expected_response:true }...: avg=167.45ms min=3.68ms med=176.32ms max=564.05ms p(90)=203.01ms p(95)=212.21ms
+    http_req_failed................: 0.00%  0 out of 402857
+    http_reqs......................: 402857 5371.043081/s
+
+    EXECUTION
+    iteration_duration.............: avg=167.64ms min=3.68ms med=176.51ms max=564.05ms p(90)=203.23ms p(95)=212.46ms
+    iterations.....................: 402857 5371.043081/s
+    vus............................: 17     min=17          max=1000
+    vus_max........................: 1000   min=1000        max=1000
+
+    NETWORK
+    data_received..................: 65 MB  860 kB/s
+    data_sent......................: 71 MB  943 kB/s
+
+
+
+-> Auditando estado final del inventario...
+OK  req=402857  thr=5371 req/s  lat_media=167.46 ms  409=0  400=0  errores=0  auditoria_consistente=True
+
+==================================================
+[44/60] B1_occ_v500_8   (estrategia=occ, carga=v500, stock=1000, conjunto caliente=2000)
+==================================================
+-> Iniciando aplicacion (JVM nueva, -Xms1g -Xmx1g)...
+PS>ErrorTerminación(Invoke-WebRequest): "La operación sobrepasó el tiempo de espera."
+-> Calentamiento (no medido)...
+-> Restaurando BD (stock=1000, version=0), VACUUM y CHECKPOINT...
+-> Midiendo con k6...
+
+
+  Ôûê TOTAL RESULTS
+
+    checks_total.......: 403445  5379.222708/s
+    checks_succeeded...: 100.00% 403445 out of 403445
+    checks_failed......: 0.00%   0 out of 403445
+
+    Ô£ô respuesta esperada (200/400/409)
+
+    CUSTOM
+    app_conflict...................: 17172  228.958129/s
+    app_error......................: 0      0/s
+    app_out_of_stock...............: 0      0/s
+    app_success....................: 386273 5150.264579/s
+
+    HTTP
+    http_req_duration..............: avg=83.47ms min=3.15ms med=86.24ms max=280.48ms p(90)=106.23ms p(95)=112.74ms
+      { expected_response:true }...: avg=83.47ms min=3.15ms med=86.24ms max=280.48ms p(90)=106.23ms p(95)=112.74ms
+    http_req_failed................: 0.00%  0 out of 403445
+    http_reqs......................: 403445 5379.222708/s
+
+    EXECUTION
+    iteration_duration.............: avg=83.66ms min=3.15ms med=86.41ms max=280.48ms p(90)=106.43ms p(95)=112.96ms
+    iterations.....................: 403445 5379.222708/s
+    vus............................: 5      min=5           max=500
+    vus_max........................: 500    min=500         max=500
+
+    NETWORK
+    data_received..................: 65 MB  862 kB/s
+    data_sent......................: 71 MB  944 kB/s
+
+
+
+-> Auditando estado final del inventario...
+OK  req=403445  thr=5379.2 req/s  lat_media=83.47 ms  409=17172  400=0  errores=0  auditoria_consistente=True
+
+==================================================
+[45/60] B1_pcc_v500_8   (estrategia=pcc, carga=v500, stock=1000, conjunto caliente=2000)
+==================================================
+-> Iniciando aplicacion (JVM nueva, -Xms1g -Xmx1g)...
+PS>ErrorTerminación(Invoke-WebRequest): "La operación sobrepasó el tiempo de espera."
+-> Calentamiento (no medido)...
+-> Restaurando BD (stock=1000, version=0), VACUUM y CHECKPOINT...
+-> Midiendo con k6...
+
+
+  Ôûê TOTAL RESULTS
+
+    checks_total.......: 407398  5431.716891/s
+    checks_succeeded...: 100.00% 407398 out of 407398
+    checks_failed......: 0.00%   0 out of 407398
+
+    Ô£ô respuesta esperada (200/400/409)
+
+    CUSTOM
+    app_conflict...................: 0      0/s
+    app_error......................: 0      0/s
+    app_out_of_stock...............: 0      0/s
+    app_success....................: 407398 5431.716891/s
+
+    HTTP
+    http_req_duration..............: avg=82.66ms min=3.15ms med=85.25ms max=194.31ms p(90)=105.6ms  p(95)=112.45ms
+      { expected_response:true }...: avg=82.66ms min=3.15ms med=85.25ms max=194.31ms p(90)=105.6ms  p(95)=112.45ms
+    http_req_failed................: 0.00%  0 out of 407398
+    http_reqs......................: 407398 5431.716891/s
+
+    EXECUTION
+    iteration_duration.............: avg=82.84ms min=3.18ms med=85.43ms max=194.31ms p(90)=105.78ms p(95)=112.63ms
+    iterations.....................: 407398 5431.716891/s
+    vus............................: 5      min=5           max=500
+    vus_max........................: 500    min=500         max=500
+
+    NETWORK
+    data_received..................: 65 MB  870 kB/s
+    data_sent......................: 72 MB  954 kB/s
+
+
+
+-> Auditando estado final del inventario...
+OK  req=407398  thr=5431.7 req/s  lat_media=82.66 ms  409=0  400=0  errores=0  auditoria_consistente=True
+
+==================================================
+[46/60] B1_occ_v100_8   (estrategia=occ, carga=v100, stock=1000, conjunto caliente=2000)
+==================================================
+-> Iniciando aplicacion (JVM nueva, -Xms1g -Xmx1g)...
+PS>ErrorTerminación(Invoke-WebRequest): "La operación sobrepasó el tiempo de espera."
+-> Calentamiento (no medido)...
+-> Restaurando BD (stock=1000, version=0), VACUUM y CHECKPOINT...
+-> Midiendo con k6...
+
+
+  Ôûê TOTAL RESULTS
+
+    checks_total.......: 343450  4579.325133/s
+    checks_succeeded...: 100.00% 343450 out of 343450
+    checks_failed......: 0.00%   0 out of 343450
+
+    Ô£ô respuesta esperada (200/400/409)
+
+    CUSTOM
+    app_conflict...................: 6918   92.239835/s
+    app_error......................: 0      0/s
+    app_out_of_stock...............: 0      0/s
+    app_success....................: 336532 4487.085298/s
+
+    HTTP
+    http_req_duration..............: avg=19.43ms min=3.02ms med=19.1ms  max=283.98ms p(90)=25.4ms  p(95)=27.65ms
+      { expected_response:true }...: avg=19.43ms min=3.02ms med=19.1ms  max=283.98ms p(90)=25.4ms  p(95)=27.65ms
+    http_req_failed................: 0.00%  0 out of 343450
+    http_reqs......................: 343450 4579.325133/s
+
+    EXECUTION
+    iteration_duration.............: avg=19.62ms min=3.11ms med=19.29ms max=284.49ms p(90)=25.61ms p(95)=27.88ms
+    iterations.....................: 343450 4579.325133/s
+    vus............................: 1      min=1           max=100
+    vus_max........................: 100    min=100         max=100
+
+    NETWORK
+    data_received..................: 55 MB  734 kB/s
+    data_sent......................: 60 MB  804 kB/s
+
+
+
+-> Auditando estado final del inventario...
+OK  req=343450  thr=4579.3 req/s  lat_media=19.43 ms  409=6918  400=0  errores=0  auditoria_consistente=True
+
+==================================================
+[47/60] B1_occ_v1000_8   (estrategia=occ, carga=v1000, stock=1000, conjunto caliente=2000)
+==================================================
+-> Iniciando aplicacion (JVM nueva, -Xms1g -Xmx1g)...
+PS>ErrorTerminación(Invoke-WebRequest): "La operación sobrepasó el tiempo de espera."
+-> Calentamiento (no medido)...
+-> Restaurando BD (stock=1000, version=0), VACUUM y CHECKPOINT...
+-> Midiendo con k6...
+
+
+  Ôûê TOTAL RESULTS
+
+    checks_total.......: 413867  5517.92825/s
+    checks_succeeded...: 100.00% 413867 out of 413867
+    checks_failed......: 0.00%   0 out of 413867
+
+    Ô£ô respuesta esperada (200/400/409)
+
+    CUSTOM
+    app_conflict...................: 17670  235.587259/s
+    app_error......................: 0      0/s
+    app_out_of_stock...............: 0      0/s
+    app_success....................: 396197 5282.340991/s
+
+    HTTP
+    http_req_duration..............: avg=162.98ms min=3.71ms med=172.73ms max=295.05ms p(90)=198.86ms p(95)=207.33ms
+      { expected_response:true }...: avg=162.98ms min=3.71ms med=172.73ms max=295.05ms p(90)=198.86ms p(95)=207.33ms
+    http_req_failed................: 0.00%  0 out of 413867
+    http_reqs......................: 413867 5517.92825/s
+
+    EXECUTION
+    iteration_duration.............: avg=163.17ms min=3.71ms med=172.91ms max=296.05ms p(90)=199.08ms p(95)=207.54ms
+    iterations.....................: 413867 5517.92825/s
+    vus............................: 18     min=18          max=1000
+    vus_max........................: 1000   min=1000        max=1000
+
+    NETWORK
+    data_received..................: 66 MB  884 kB/s
+    data_sent......................: 73 MB  969 kB/s
+
+
+
+-> Auditando estado final del inventario...
+OK  req=413867  thr=5517.9 req/s  lat_media=162.99 ms  409=17670  400=0  errores=0  auditoria_consistente=True
+
+==================================================
+[48/60] B1_pcc_v100_8   (estrategia=pcc, carga=v100, stock=1000, conjunto caliente=2000)
+==================================================
+-> Iniciando aplicacion (JVM nueva, -Xms1g -Xmx1g)...
+PS>ErrorTerminación(Invoke-WebRequest): "La operación sobrepasó el tiempo de espera."
+-> Calentamiento (no medido)...
+-> Restaurando BD (stock=1000, version=0), VACUUM y CHECKPOINT...
+-> Midiendo con k6...
+
+
+  Ôûê TOTAL RESULTS
+
+    checks_total.......: 359192  4789.096346/s
+    checks_succeeded...: 100.00% 359192 out of 359192
+    checks_failed......: 0.00%   0 out of 359192
+
+    Ô£ô respuesta esperada (200/400/409)
+
+    CUSTOM
+    app_conflict...................: 0      0/s
+    app_error......................: 0      0/s
+    app_out_of_stock...............: 0      0/s
+    app_success....................: 359192 4789.096346/s
+
+    HTTP
+    http_req_duration..............: avg=18.57ms min=2.55ms med=18.32ms max=68.44ms p(90)=25.09ms p(95)=27.62ms
+      { expected_response:true }...: avg=18.57ms min=2.55ms med=18.32ms max=68.44ms p(90)=25.09ms p(95)=27.62ms
+    http_req_failed................: 0.00%  0 out of 359192
+    http_reqs......................: 359192 4789.096346/s
+
+    EXECUTION
+    iteration_duration.............: avg=18.76ms min=2.55ms med=18.5ms  max=68.44ms p(90)=25.3ms  p(95)=27.85ms
+    iterations.....................: 359192 4789.096346/s
+    vus............................: 1      min=1           max=100
+    vus_max........................: 100    min=100         max=100
+
+    NETWORK
+    data_received..................: 58 MB  767 kB/s
+    data_sent......................: 63 MB  841 kB/s
+
+
+
+-> Auditando estado final del inventario...
+OK  req=359192  thr=4789.1 req/s  lat_media=18.58 ms  409=0  400=0  errores=0  auditoria_consistente=True
+
+==================================================
+[49/60] B1_occ_v500_9   (estrategia=occ, carga=v500, stock=1000, conjunto caliente=2000)
+==================================================
+-> Iniciando aplicacion (JVM nueva, -Xms1g -Xmx1g)...
+PS>ErrorTerminación(Invoke-WebRequest): "La operación sobrepasó el tiempo de espera."
+-> Calentamiento (no medido)...
+-> Restaurando BD (stock=1000, version=0), VACUUM y CHECKPOINT...
+-> Midiendo con k6...
+
+
+  Ôûê TOTAL RESULTS
+
+    checks_total.......: 402349  5364.607655/s
+    checks_succeeded...: 100.00% 402349 out of 402349
+    checks_failed......: 0.00%   0 out of 402349
+
+    Ô£ô respuesta esperada (200/400/409)
+
+    CUSTOM
+    app_conflict...................: 17439  232.51802/s
+    app_error......................: 0      0/s
+    app_out_of_stock...............: 0      0/s
+    app_success....................: 384910 5132.089635/s
+
+    HTTP
+    http_req_duration..............: avg=83.7ms  min=3.18ms med=86.52ms max=216.37ms p(90)=106.6ms  p(95)=113.01ms
+      { expected_response:true }...: avg=83.7ms  min=3.18ms med=86.52ms max=216.37ms p(90)=106.6ms  p(95)=113.01ms
+    http_req_failed................: 0.00%  0 out of 402349
+    http_reqs......................: 402349 5364.607655/s
+
+    EXECUTION
+    iteration_duration.............: avg=83.88ms min=3.23ms med=86.71ms max=216.37ms p(90)=106.81ms p(95)=113.21ms
+    iterations.....................: 402349 5364.607655/s
+    vus............................: 5      min=5           max=500
+    vus_max........................: 500    min=500         max=500
+
+    NETWORK
+    data_received..................: 65 MB  860 kB/s
+    data_sent......................: 71 MB  942 kB/s
+
+
+
+-> Auditando estado final del inventario...
+OK  req=402349  thr=5364.6 req/s  lat_media=83.7 ms  409=17439  400=0  errores=0  auditoria_consistente=True
+
+==================================================
+[50/60] B1_occ_v1000_9   (estrategia=occ, carga=v1000, stock=1000, conjunto caliente=2000)
+==================================================
+-> Iniciando aplicacion (JVM nueva, -Xms1g -Xmx1g)...
+PS>ErrorTerminación(Invoke-WebRequest): "La operación sobrepasó el tiempo de espera."
+-> Calentamiento (no medido)...
+-> Restaurando BD (stock=1000, version=0), VACUUM y CHECKPOINT...
+-> Midiendo con k6...
+
+
+  Ôûê TOTAL RESULTS
+
+    checks_total.......: 410231  5469.552629/s
+    checks_succeeded...: 100.00% 410231 out of 410231
+    checks_failed......: 0.00%   0 out of 410231
+
+    Ô£ô respuesta esperada (200/400/409)
+
+    CUSTOM
+    app_conflict...................: 17633  235.098326/s
+    app_error......................: 0      0/s
+    app_out_of_stock...............: 0      0/s
+    app_success....................: 392598 5234.454302/s
+
+    HTTP
+    http_req_duration..............: avg=164.44ms min=3.14ms med=173.5ms  max=298.48ms p(90)=199.92ms p(95)=208.46ms
+      { expected_response:true }...: avg=164.44ms min=3.14ms med=173.5ms  max=298.48ms p(90)=199.92ms p(95)=208.46ms
+    http_req_failed................: 0.00%  0 out of 410231
+    http_reqs......................: 410231 5469.552629/s
+
+    EXECUTION
+    iteration_duration.............: avg=164.63ms min=3.14ms med=173.68ms max=298.48ms p(90)=200.13ms p(95)=208.69ms
+    iterations.....................: 410231 5469.552629/s
+    vus............................: 17     min=17          max=1000
+    vus_max........................: 1000   min=1000        max=1000
+
+    NETWORK
+    data_received..................: 66 MB  877 kB/s
+    data_sent......................: 72 MB  960 kB/s
+
+
+
+-> Auditando estado final del inventario...
+OK  req=410231  thr=5469.6 req/s  lat_media=164.44 ms  409=17633  400=0  errores=0  auditoria_consistente=True
+
+==================================================
+[51/60] B1_pcc_v1000_9   (estrategia=pcc, carga=v1000, stock=1000, conjunto caliente=2000)
+==================================================
+-> Iniciando aplicacion (JVM nueva, -Xms1g -Xmx1g)...
+PS>ErrorTerminación(Invoke-WebRequest): "La operación sobrepasó el tiempo de espera."
+-> Calentamiento (no medido)...
+-> Restaurando BD (stock=1000, version=0), VACUUM y CHECKPOINT...
+-> Midiendo con k6...
+
+
+  Ôûê TOTAL RESULTS
+
+    checks_total.......: 406724  5422.753857/s
+    checks_succeeded...: 100.00% 406724 out of 406724
+    checks_failed......: 0.00%   0 out of 406724
+
+    Ô£ô respuesta esperada (200/400/409)
+
+    CUSTOM
+    app_conflict...................: 0      0/s
+    app_error......................: 0      0/s
+    app_out_of_stock...............: 0      0/s
+    app_success....................: 406724 5422.753857/s
+
+    HTTP
+    http_req_duration..............: avg=165.86ms min=3.19ms med=173.93ms max=542.48ms p(90)=201.62ms p(95)=210.4ms
+      { expected_response:true }...: avg=165.86ms min=3.19ms med=173.93ms max=542.48ms p(90)=201.62ms p(95)=210.4ms
+    http_req_failed................: 0.00%  0 out of 406724
+    http_reqs......................: 406724 5422.753857/s
+
+    EXECUTION
+    iteration_duration.............: avg=166.05ms min=3.71ms med=174.11ms max=542.48ms p(90)=201.82ms p(95)=210.63ms
+    iterations.....................: 406724 5422.753857/s
+    vus............................: 17     min=17          max=1000
+    vus_max........................: 1000   min=1000        max=1000
+
+    NETWORK
+    data_received..................: 65 MB  869 kB/s
+    data_sent......................: 71 MB  952 kB/s
+
+
+
+-> Auditando estado final del inventario...
+OK  req=406724  thr=5422.8 req/s  lat_media=165.87 ms  409=0  400=0  errores=0  auditoria_consistente=True
+
+==================================================
+[52/60] B1_pcc_v500_9   (estrategia=pcc, carga=v500, stock=1000, conjunto caliente=2000)
+==================================================
+-> Iniciando aplicacion (JVM nueva, -Xms1g -Xmx1g)...
+PS>ErrorTerminación(Invoke-WebRequest): "La operación sobrepasó el tiempo de espera."
+-> Calentamiento (no medido)...
+-> Restaurando BD (stock=1000, version=0), VACUUM y CHECKPOINT...
+-> Midiendo con k6...
+
+
+  Ôûê TOTAL RESULTS
+
+    checks_total.......: 402684  5368.876718/s
+    checks_succeeded...: 100.00% 402684 out of 402684
+    checks_failed......: 0.00%   0 out of 402684
+
+    Ô£ô respuesta esperada (200/400/409)
+
+    CUSTOM
+    app_conflict...................: 0      0/s
+    app_error......................: 0      0/s
+    app_out_of_stock...............: 0      0/s
+    app_success....................: 402684 5368.876718/s
+
+    HTTP
+    http_req_duration..............: avg=83.62ms min=2.93ms med=85.89ms max=457.85ms p(90)=106.77ms p(95)=113.62ms
+      { expected_response:true }...: avg=83.62ms min=2.93ms med=85.89ms max=457.85ms p(90)=106.77ms p(95)=113.62ms
+    http_req_failed................: 0.00%  0 out of 402684
+    http_reqs......................: 402684 5368.876718/s
+
+    EXECUTION
+    iteration_duration.............: avg=83.81ms min=2.93ms med=86.08ms max=457.85ms p(90)=106.97ms p(95)=113.85ms
+    iterations.....................: 402684 5368.876718/s
+    vus............................: 5      min=5           max=500
+    vus_max........................: 500    min=500         max=500
+
+    NETWORK
+    data_received..................: 65 MB  860 kB/s
+    data_sent......................: 71 MB  943 kB/s
+
+
+
+-> Auditando estado final del inventario...
+OK  req=402684  thr=5368.9 req/s  lat_media=83.63 ms  409=0  400=0  errores=0  auditoria_consistente=True
+
+==================================================
+[53/60] B1_pcc_v100_9   (estrategia=pcc, carga=v100, stock=1000, conjunto caliente=2000)
+==================================================
+-> Iniciando aplicacion (JVM nueva, -Xms1g -Xmx1g)...
+PS>ErrorTerminación(Invoke-WebRequest): "La operación sobrepasó el tiempo de espera."
+-> Calentamiento (no medido)...
+-> Restaurando BD (stock=1000, version=0), VACUUM y CHECKPOINT...
+-> Midiendo con k6...
+
+
+  Ôûê TOTAL RESULTS
+
+    checks_total.......: 352735  4703.088999/s
+    checks_succeeded...: 100.00% 352735 out of 352735
+    checks_failed......: 0.00%   0 out of 352735
+
+    Ô£ô respuesta esperada (200/400/409)
+
+    CUSTOM
+    app_conflict...................: 0      0/s
+    app_error......................: 0      0/s
+    app_out_of_stock...............: 0      0/s
+    app_success....................: 352735 4703.088999/s
+
+    HTTP
+    http_req_duration..............: avg=18.92ms min=3.04ms med=18.44ms max=265.79ms p(90)=25.26ms p(95)=27.79ms
+      { expected_response:true }...: avg=18.92ms min=3.04ms med=18.44ms max=265.79ms p(90)=25.26ms p(95)=27.79ms
+    http_req_failed................: 0.00%  0 out of 352735
+    http_reqs......................: 352735 4703.088999/s
+
+    EXECUTION
+    iteration_duration.............: avg=19.11ms min=3.04ms med=18.63ms max=265.79ms p(90)=25.47ms p(95)=28.01ms
+    iterations.....................: 352735 4703.088999/s
+    vus............................: 1      min=1           max=100
+    vus_max........................: 100    min=100         max=100
+
+    NETWORK
+    data_received..................: 57 MB  753 kB/s
+    data_sent......................: 62 MB  826 kB/s
+
+
+
+-> Auditando estado final del inventario...
+OK  req=352735  thr=4703.1 req/s  lat_media=18.92 ms  409=0  400=0  errores=0  auditoria_consistente=True
+
+==================================================
+[54/60] B1_occ_v100_9   (estrategia=occ, carga=v100, stock=1000, conjunto caliente=2000)
+==================================================
+-> Iniciando aplicacion (JVM nueva, -Xms1g -Xmx1g)...
+PS>ErrorTerminación(Invoke-WebRequest): "La operación sobrepasó el tiempo de espera."
+-> Calentamiento (no medido)...
+-> Restaurando BD (stock=1000, version=0), VACUUM y CHECKPOINT...
+-> Midiendo con k6...
+
+
+  Ôûê TOTAL RESULTS
+
+    checks_total.......: 357216  4762.768158/s
+    checks_succeeded...: 100.00% 357216 out of 357216
+    checks_failed......: 0.00%   0 out of 357216
+
+    Ô£ô respuesta esperada (200/400/409)
+
+    CUSTOM
+    app_conflict...................: 6981   93.077814/s
+    app_error......................: 0      0/s
+    app_out_of_stock...............: 0      0/s
+    app_success....................: 350235 4669.690343/s
+
+    HTTP
+    http_req_duration..............: avg=18.67ms min=2.72ms med=18.28ms max=132.84ms p(90)=24.76ms p(95)=27.07ms
+      { expected_response:true }...: avg=18.67ms min=2.72ms med=18.28ms max=132.84ms p(90)=24.76ms p(95)=27.07ms
+    http_req_failed................: 0.00%  0 out of 357216
+    http_reqs......................: 357216 4762.768158/s
+
+    EXECUTION
+    iteration_duration.............: avg=18.87ms min=2.72ms med=18.48ms max=141.53ms p(90)=24.97ms p(95)=27.3ms
+    iterations.....................: 357216 4762.768158/s
+    vus............................: 1      min=1           max=100
+    vus_max........................: 100    min=100         max=100
+
+    NETWORK
+    data_received..................: 57 MB  763 kB/s
+    data_sent......................: 63 MB  836 kB/s
+
+
+
+-> Auditando estado final del inventario...
+OK  req=357216  thr=4762.8 req/s  lat_media=18.68 ms  409=6981  400=0  errores=0  auditoria_consistente=True
+
+==================================================
+[55/60] B1_pcc_v1000_10   (estrategia=pcc, carga=v1000, stock=1000, conjunto caliente=2000)
+==================================================
+-> Iniciando aplicacion (JVM nueva, -Xms1g -Xmx1g)...
+PS>ErrorTerminación(Invoke-WebRequest): "La operación sobrepasó el tiempo de espera."
+-> Calentamiento (no medido)...
+-> Restaurando BD (stock=1000, version=0), VACUUM y CHECKPOINT...
+-> Midiendo con k6...
+
+
+  Ôûê TOTAL RESULTS
+
+    checks_total.......: 407134  5428.41477/s
+    checks_succeeded...: 100.00% 407134 out of 407134
+    checks_failed......: 0.00%   0 out of 407134
+
+    Ô£ô respuesta esperada (200/400/409)
+
+    CUSTOM
+    app_conflict...................: 0      0/s
+    app_error......................: 0      0/s
+    app_out_of_stock...............: 0      0/s
+    app_success....................: 407134 5428.41477/s
+
+    HTTP
+    http_req_duration..............: avg=165.68ms min=3.32ms med=174.61ms max=463.94ms p(90)=201.1ms  p(95)=210.02ms
+      { expected_response:true }...: avg=165.68ms min=3.32ms med=174.61ms max=463.94ms p(90)=201.1ms  p(95)=210.02ms
+    http_req_failed................: 0.00%  0 out of 407134
+    http_reqs......................: 407134 5428.41477/s
+
+    EXECUTION
+    iteration_duration.............: avg=165.88ms min=3.32ms med=174.79ms max=463.94ms p(90)=201.31ms p(95)=210.2ms
+    iterations.....................: 407134 5428.41477/s
+    vus............................: 17     min=17          max=1000
+    vus_max........................: 1000   min=1000        max=1000
+
+    NETWORK
+    data_received..................: 65 MB  869 kB/s
+    data_sent......................: 72 MB  953 kB/s
+
+
+
+-> Auditando estado final del inventario...
+OK  req=407134  thr=5428.4 req/s  lat_media=165.69 ms  409=0  400=0  errores=0  auditoria_consistente=True
+
+==================================================
+[56/60] B1_occ_v500_10   (estrategia=occ, carga=v500, stock=1000, conjunto caliente=2000)
+==================================================
+-> Iniciando aplicacion (JVM nueva, -Xms1g -Xmx1g)...
+PS>ErrorTerminación(Invoke-WebRequest): "La operación sobrepasó el tiempo de espera."
+-> Calentamiento (no medido)...
+-> Restaurando BD (stock=1000, version=0), VACUUM y CHECKPOINT...
+-> Midiendo con k6...
+
+
+  Ôûê TOTAL RESULTS
+
+    checks_total.......: 408669  5448.847262/s
+    checks_succeeded...: 100.00% 408669 out of 408669
+    checks_failed......: 0.00%   0 out of 408669
+
+    Ô£ô respuesta esperada (200/400/409)
+
+    CUSTOM
+    app_conflict...................: 17457  232.756893/s
+    app_error......................: 0      0/s
+    app_out_of_stock...............: 0      0/s
+    app_success....................: 391212 5216.090369/s
+
+    HTTP
+    http_req_duration..............: avg=82.4ms  min=2.9ms med=84.64ms max=417.27ms p(90)=105.24ms p(95)=111.93ms
+      { expected_response:true }...: avg=82.4ms  min=2.9ms med=84.64ms max=417.27ms p(90)=105.24ms p(95)=111.93ms
+    http_req_failed................: 0.00%  0 out of 408669
+    http_reqs......................: 408669 5448.847262/s
+
+    EXECUTION
+    iteration_duration.............: avg=82.59ms min=2.9ms med=84.82ms max=417.27ms p(90)=105.42ms p(95)=112.14ms
+    iterations.....................: 408669 5448.847262/s
+    vus............................: 6      min=6           max=500
+    vus_max........................: 500    min=500         max=500
+
+    NETWORK
+    data_received..................: 66 MB  873 kB/s
+    data_sent......................: 72 MB  957 kB/s
+
+
+
+-> Auditando estado final del inventario...
+OK  req=408669  thr=5448.8 req/s  lat_media=82.41 ms  409=17457  400=0  errores=0  auditoria_consistente=True
+
+==================================================
+[57/60] B1_pcc_v500_10   (estrategia=pcc, carga=v500, stock=1000, conjunto caliente=2000)
+==================================================
+-> Iniciando aplicacion (JVM nueva, -Xms1g -Xmx1g)...
+PS>ErrorTerminación(Invoke-WebRequest): "La operación sobrepasó el tiempo de espera."
+-> Calentamiento (no medido)...
+-> Restaurando BD (stock=1000, version=0), VACUUM y CHECKPOINT...
+-> Midiendo con k6...
+
+
+  Ôûê TOTAL RESULTS
+
+    checks_total.......: 402922  5372.010744/s
+    checks_succeeded...: 100.00% 402922 out of 402922
+    checks_failed......: 0.00%   0 out of 402922
+
+    Ô£ô respuesta esperada (200/400/409)
+
+    CUSTOM
+    app_conflict...................: 0      0/s
+    app_error......................: 0      0/s
+    app_out_of_stock...............: 0      0/s
+    app_success....................: 402922 5372.010744/s
+
+    HTTP
+    http_req_duration..............: avg=83.58ms min=3.13ms med=85.52ms max=444.96ms p(90)=106.41ms p(95)=113.32ms
+      { expected_response:true }...: avg=83.58ms min=3.13ms med=85.52ms max=444.96ms p(90)=106.41ms p(95)=113.32ms
+    http_req_failed................: 0.00%  0 out of 402922
+    http_reqs......................: 402922 5372.010744/s
+
+    EXECUTION
+    iteration_duration.............: avg=83.76ms min=3.16ms med=85.69ms max=445.47ms p(90)=106.62ms p(95)=113.53ms
+    iterations.....................: 402922 5372.010744/s
+    vus............................: 5      min=5           max=500
+    vus_max........................: 500    min=500         max=500
+
+    NETWORK
+    data_received..................: 65 MB  861 kB/s
+    data_sent......................: 71 MB  943 kB/s
+
+
+
+-> Auditando estado final del inventario...
+OK  req=402922  thr=5372 req/s  lat_media=83.58 ms  409=0  400=0  errores=0  auditoria_consistente=True
+
+==================================================
+[58/60] B1_occ_v1000_10   (estrategia=occ, carga=v1000, stock=1000, conjunto caliente=2000)
+==================================================
+-> Iniciando aplicacion (JVM nueva, -Xms1g -Xmx1g)...
+PS>ErrorTerminación(Invoke-WebRequest): "La operación sobrepasó el tiempo de espera."
+-> Calentamiento (no medido)...
+-> Restaurando BD (stock=1000, version=0), VACUUM y CHECKPOINT...
+-> Midiendo con k6...
+
+
+  Ôûê TOTAL RESULTS
+
+    checks_total.......: 409108  5454.591994/s
+    checks_succeeded...: 100.00% 409108 out of 409108
+    checks_failed......: 0.00%   0 out of 409108
+
+    Ô£ô respuesta esperada (200/400/409)
+
+    CUSTOM
+    app_conflict...................: 17530  233.725563/s
+    app_error......................: 0      0/s
+    app_out_of_stock...............: 0      0/s
+    app_success....................: 391578 5220.866431/s
+
+    HTTP
+    http_req_duration..............: avg=164.89ms min=3.13ms med=173.35ms max=559.76ms p(90)=198.9ms  p(95)=207.74ms
+      { expected_response:true }...: avg=164.89ms min=3.13ms med=173.35ms max=559.76ms p(90)=198.9ms  p(95)=207.74ms
+    http_req_failed................: 0.00%  0 out of 409108
+    http_reqs......................: 409108 5454.591994/s
+
+    EXECUTION
+    iteration_duration.............: avg=165.08ms min=3.63ms med=173.53ms max=559.76ms p(90)=199.11ms p(95)=207.93ms
+    iterations.....................: 409108 5454.591994/s
+    vus............................: 19     min=19          max=1000
+    vus_max........................: 1000   min=1000        max=1000
+
+    NETWORK
+    data_received..................: 66 MB  874 kB/s
+    data_sent......................: 72 MB  958 kB/s
+
+
+
+-> Auditando estado final del inventario...
+OK  req=409108  thr=5454.6 req/s  lat_media=164.9 ms  409=17530  400=0  errores=0  auditoria_consistente=True
+
+==================================================
+[59/60] B1_occ_v100_10   (estrategia=occ, carga=v100, stock=1000, conjunto caliente=2000)
+==================================================
+-> Iniciando aplicacion (JVM nueva, -Xms1g -Xmx1g)...
+PS>ErrorTerminación(Invoke-WebRequest): "La operación sobrepasó el tiempo de espera."
+-> Calentamiento (no medido)...
+-> Restaurando BD (stock=1000, version=0), VACUUM y CHECKPOINT...
+-> Midiendo con k6...
+
+
+  Ôûê TOTAL RESULTS
+
+    checks_total.......: 348238  4643.034339/s
+    checks_succeeded...: 100.00% 348238 out of 348238
+    checks_failed......: 0.00%   0 out of 348238
+
+    Ô£ô respuesta esperada (200/400/409)
+
+    CUSTOM
+    app_conflict...................: 6914   92.183907/s
+    app_error......................: 0      0/s
+    app_out_of_stock...............: 0      0/s
+    app_success....................: 341324 4550.850432/s
+
+    HTTP
+    http_req_duration..............: avg=19.16ms min=2.71ms med=18.85ms max=65.47ms p(90)=25.21ms p(95)=27.47ms
+      { expected_response:true }...: avg=19.16ms min=2.71ms med=18.85ms max=65.47ms p(90)=25.21ms p(95)=27.47ms
+    http_req_failed................: 0.00%  0 out of 348238
+    http_reqs......................: 348238 4643.034339/s
+
+    EXECUTION
+    iteration_duration.............: avg=19.35ms min=3.12ms med=19.03ms max=65.8ms  p(90)=25.44ms p(95)=27.69ms
+    iterations.....................: 348238 4643.034339/s
+    vus............................: 1      min=1           max=100
+    vus_max........................: 100    min=100         max=100
+
+    NETWORK
+    data_received..................: 56 MB  744 kB/s
+    data_sent......................: 61 MB  815 kB/s
+
+
+
+-> Auditando estado final del inventario...
+OK  req=348238  thr=4643 req/s  lat_media=19.17 ms  409=6914  400=0  errores=0  auditoria_consistente=True
+
+==================================================
+[60/60] B1_pcc_v100_10   (estrategia=pcc, carga=v100, stock=1000, conjunto caliente=2000)
+==================================================
+-> Iniciando aplicacion (JVM nueva, -Xms1g -Xmx1g)...
+PS>ErrorTerminación(Invoke-WebRequest): "La operación sobrepasó el tiempo de espera."
+-> Calentamiento (no medido)...
+-> Restaurando BD (stock=1000, version=0), VACUUM y CHECKPOINT...
+-> Midiendo con k6...
+
+
+  Ôûê TOTAL RESULTS
+
+    checks_total.......: 339651  4528.59476/s
+    checks_succeeded...: 100.00% 339651 out of 339651
+    checks_failed......: 0.00%   0 out of 339651
+
+    Ô£ô respuesta esperada (200/400/409)
+
+    CUSTOM
+    app_conflict...................: 0      0/s
+    app_error......................: 0      0/s
+    app_out_of_stock...............: 0      0/s
+    app_success....................: 339651 4528.59476/s
+
+    HTTP
+    http_req_duration..............: avg=19.64ms min=2.91ms med=19.27ms max=305.6ms p(90)=25.57ms p(95)=27.88ms
+      { expected_response:true }...: avg=19.64ms min=2.91ms med=19.27ms max=305.6ms p(90)=25.57ms p(95)=27.88ms
+    http_req_failed................: 0.00%  0 out of 339651
+    http_reqs......................: 339651 4528.59476/s
+
+    EXECUTION
+    iteration_duration.............: avg=19.84ms min=2.91ms med=19.46ms max=305.6ms p(90)=25.8ms  p(95)=28.12ms
+    iterations.....................: 339651 4528.59476/s
+    vus............................: 1      min=1           max=100
+    vus_max........................: 100    min=100         max=100
+
+    NETWORK
+    data_received..................: 54 MB  725 kB/s
+    data_sent......................: 60 MB  795 kB/s
+
+
+
+-> Auditando estado final del inventario...
+OK  req=339651  thr=4528.6 req/s  lat_media=19.65 ms  409=0  400=0  errores=0  auditoria_consistente=True
+
+=== FIN. Corridas registradas: 60 / 60 ; fallidas en esta sesion: 0 ===
+Datos: C:\TFG-Concurrencia\results_B\B1\runs.csv
+**********************
+Fin de la transcripción de Windows PowerShell
+Hora de finalización: 20261020011940
+**********************

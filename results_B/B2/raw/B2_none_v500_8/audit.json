@@ -1,0 +1,16 @@
+﻿{
+    "initial_stock":  800,
+    "products":  10000,
+    "products_touched":  9960,
+    "total_success_app":  218958,
+    "total_sold_db":  135237,
+    "sum_version":  218958,
+    "lost_update_units":  83721,
+    "products_with_lost_updates":  187,
+    "oversold_units":  83633,
+    "products_oversold":  100,
+    "products_negative_stock":  0,
+    "products_version_mismatch":  0,
+    "min_stock":  0,
+    "consistent":  false
+}

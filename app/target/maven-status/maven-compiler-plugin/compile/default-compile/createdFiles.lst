@@ -1,0 +1,6 @@
+com\tfg\concurrencia\InventoryService.class
+com\tfg\concurrencia\TfgApplication.class
+com\tfg\concurrencia\StatsRegistry.class
+com\tfg\concurrencia\InventoryController.class
+com\tfg\concurrencia\PurchaseRequest.class
+com\tfg\concurrencia\PurchaseResponse.class

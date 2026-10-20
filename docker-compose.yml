@@ -1,0 +1,27 @@
+services:
+  postgres:
+    image: postgres:15
+    container_name: tfg_postgres
+    environment:
+      POSTGRES_USER: tfg_user
+      POSTGRES_PASSWORD: tfg_password
+      POSTGRES_DB: tfg_concurrencia
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./db/init.sql:/docker-entrypoint-initdb.d/init.sql
+      - pgdata:/var/lib/postgresql/data
+    # max_connections=300: con el valor por defecto (100) un pool de 200 conexiones NO cabe.
+    command:
+      - "postgres"
+      - "-c"
+      - "max_connections=300"
+      - "-c"
+      - "default_transaction_isolation=read committed"
+      - "-c"
+      - "deadlock_timeout=1s"
+      - "-c"
+      - "log_lock_waits=on"
+
+volumes:
+  pgdata:
